@@ -24,7 +24,7 @@ MODIFICATION LOG:
 Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
 1.0      11/03/2019  JJAUSSI          1. Created this process for LDS BC IT243
-
+1.1      2/06/2021  JJAUSSI          1. Added conn_DFNB3 connection 
 
 
 RUNTIME: 
@@ -60,7 +60,7 @@ SELECT c.*
      WHERE ConfigurationFilter = 'CommonConfigurations';
 
 
-    -- 1.1) conn_EXM
+    -- 1.2) conn_DFNB
 
     INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
                                         , ConfiguredValue
@@ -75,7 +75,7 @@ SELECT c.*
           );
 
 
-    -- 1.2) conn_DFNB
+    -- 1.2) conn_DFNB3
 
     INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
                                         , ConfiguredValue
