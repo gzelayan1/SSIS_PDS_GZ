@@ -1,0 +1,3371 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/5/2021 10:01:01 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-8Q475343"
+  DTS:CreatorName="LAPTOP-8Q475343\genes"
+  DTS:DTSID="{0F0A7F9F-1692-482B-BF30-4B7BF970865C}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="SSIS_PDS_Template_GZ"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{72A36B23-1204-4DD5-84FE-BCE2EEB9FFF2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EXM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EBE425FC-825F-4D63-8E4A-C776181BF249}"
+      DTS:ObjectName="EXM">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_EXM]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS_PDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+      DTS:ObjectName="SSIS_PDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="SSIS_PDS_CONFIG_FILE"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{AE4DEDF4-2609-4C27-8D0D-080DBE1C5A2F}"
+      DTS:ObjectName="XML Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;CommonConfigurations&quot;;"
+      DTS:ConfigurationType="7"
+      DTS:CreationName=""
+      DTS:DTSID="{584EB970-389B-4473-BE79-9C4B7B087FEC}"
+      DTS:ObjectName="System Level Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;LDSBC_IT243_gz&quot;;"
+      DTS:ConfigurationType="7"
+      DTS:CreationName=""
+      DTS:DTSID="{50E10192-F403-4E4C-B8BB-276D8F1E33DD}"
+      DTS:ObjectName="Solution Level Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;SSIS_PDS_Template_gz&quot;;"
+      DTS:ConfigurationType="7"
+      DTS:CreationName=""
+      DTS:DTSID="{C4624F32-37EF-4EEB-9610-2C8E9F8BF6BC}"
+      DTS:ObjectName="Package Level Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="BatchLogID"
+      DTS:ConfigurationVariable="\Package.Variables[User::BatchLogID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{093B484A-23A5-4AC9-B878-D73FE213E4BB}"
+      DTS:ObjectName="BatchLogID" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{235367A0-1A4D-4C1A-A11C-B30F2BF07403}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="BatchLogID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{62EABE3A-ED97-4222-91EF-AE30D940ABEF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_EXM">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1E130882-66FF-47E1-8969-55849A0F6EC8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EndBatchAudit">
+      <DTS:VariableValue
+        DTS:DataType="17">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{63062AE0-A252-4604-A1C6-08D32CA9FBB5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageLogID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{10F6B9FF-7636-44B7-B409-DD30DFCC0A98}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="strVariableValue">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{37462B4C-1E13-40F4-81B5-4CE784708669}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="v">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4BA273AB-04E6-4FF8-8215-95A9442BEA31}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="v_data_share_root">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E669428B-4F42-42C5-8EE5-E3EFC43E49DD}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="v_get_date"
+      DTS:RaiseChangedEvent="True">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\PARENT container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{CE537B8C-CA38-4D62-A23B-E7BEF5FEBC32}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PARENT container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\PARENT container\MsgBox check Variable"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="Script Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{69AF6DDD-B1F6-484D-AE70-742EC399B1EA}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="MsgBox check Variable"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_2277a75fc44647928949895293ef85e9"
+              VSTAMajorVersion="15"
+              VSTAMinorVersion="0"
+              Language="VisualBasic"
+              ReadOnlyVariables="User::v_data_share_root">
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_2277a75fc44647928949895293ef85e9")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("HP Inc.")> 
+<Assembly: AssemblyProduct("ST_2277a75fc44647928949895293ef85e9")> 
+<Assembly: AssemblyCopyright("Copyright @ HP Inc. 2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("8b835b7e-5858-488c-9887-3404cae8900e")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="ST_2277a75fc44647928949895293ef85e9.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42290a99-b7c9-41ca-8fe9-c55d6b8eba66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ST_2277a75fc44647928949895293ef85e9</RootNamespace>
+    <AssemblyName>ST_2277a75fc44647928949895293ef85e9</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScriptMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask"
+                           HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}"
+                           ApplicationType="usd"
+                           Language="vb"
+                           TemplatesPath=""
+                           DebugInfoCommandLine=""
+                           DebugInfoWorkingDir=""
+                           IconImageList=""/>
+
+        <Host Name="ScriptTask" IconIndex="">
+        </Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>ST_2277a75fc44647928949895293ef85e9</msb:CodeName>
+    <msb:DisplayName>ST_2277a75fc44647928949895293ef85e9</msb:DisplayName>
+    <msb:ProjectId>{7875253B-AD7A-43EF-AE3E-FE2DA24251CA}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_2277a75fc44647928949895293ef85e9.vbproj" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        '
+        ' Add your code here
+        '
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.resx"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+Namespace My.Resources
+    
+    '''<summary>
+    '''   A strongly-typed resource class, for looking up localized strings, etc.
+    '''</summary>
+    'This class was auto-generated by the Strongly Typed Resource Builder
+    'class via a tool like ResGen or Visual Studio.NET.
+    'To add or remove a member, edit your .ResX file then rerun ResGen
+    'with the /str option, or rebuild your VS project.
+    Class MyResources
+        
+        Private Shared _resMgr As System.Resources.ResourceManager
+        
+        Private Shared _resCulture As System.Globalization.CultureInfo
+        
+        Friend Sub New()
+            MyBase.New
+        End Sub
+        
+        '''<summary>
+        '''   Returns the cached ResourceManager instance used by this class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
+            Get
+                If (_resMgr Is Nothing) Then
+                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
+                    _resMgr = temp
+                End If
+                Return _resMgr
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   Overrides the current thread's CurrentUICulture property for all
+        '''   resource lookups using this strongly typed resource class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared Property Culture() As System.Globalization.CultureInfo
+            Get
+                Return _resCulture
+            End Get
+            Set
+                _resCulture = value
+            End Set
+        End Property
+    End Class
+End Namespace]]></ProjectItem>
+              <BinaryItem
+                Name="ST_2277a75fc44647928949895293ef85e9.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAL7/HmAAAAAAAAAAAOAAIiALAVAAABgAAAAIAAAAAAAAQjcA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAPA2AABPAAAAAEAAAGQEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAASBcAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAGQEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAk
+NwAAAAAAAEgAAAACAAUAKCIAABAUAAABAAAAAAAAADg2AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBgAAAoqHgIoGQAACiqmcxoAAAqAAQAABHMbAAAKgAIA
+AARzHAAACoADAAAEcx0AAAqABAAABCoufgEAAARvHgAACioufgIAAARvHwAACioufgMAAARvIAAA
+CioufgQAAARvIQAACioeAigiAAAKKq5+BQAABC0ecgEAAHDQBQAAAigjAAAKbyQAAApzJQAACoAF
+AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqQnMiAAAKKCYAAAqACAAABCoeAignAAAKKgAAGzABAD8A
+AAAAAAAAfgcAAAQtMn4IAAAEKCYAAAooKAAACn4HAAAELRxzDQAABoAHAAAE3hB+CAAABCgmAAAK
+KCkAAArcfgcAAAQqAAEQAAACAB0ADCkAEAAAAAAeAigqAAAKKjYCKCsAAAoWbywAAAoqNgIDKCYA
+AAooLQAACioeAiguAAAKKi7QCAAAAigjAAAKKh4CKC8AAAoqEzABABQAAAABAAARAowFAAAbLQgo
+AQAAKworAgIKBioiA/4VBQAAGyoAAAATMAIAKAAAAAIAABECezEAAApvMgAACgoGjAgAABstEigC
+AAArCgJ7MQAACgZvMwAACgYqSgIoIgAACgJzNAAACn0xAAAKKgBCU0pCAQABAAAAAAAMAAAAdjQu
+MC4zMDMxOQAAAAAFAGwAAAB4BwAAI34AAOQHAACICAAAI1N0cmluZ3MAAAAAbBAAADQAAAAjVVMA
+oBAAABAAAAAjR1VJRAAAALAQAABgAwAAI0Jsb2IAAAAAAAAAAgAAAVcdogkJDwAAAPoBMwAWAAAB
+AAAAKwAAAAoAAAAMAAAAGQAAAAQAAAA0AAAAAgAAADcAAAACAAAABAAAAAgAAAAJAAAACAAAAAEA
+AAAEAAAAAQAAAAMAAAADAAAAAgAAAAAAzgQBAAAAAAAGAA0DKQcGALIDKQcGAOQBagYPAM8HAAAG
+ACUCcgUGAPACcgUGAJkDcgUGAC0DcgUGAEYDcgUGAGwCcgUGAGED9gQGABEC4wYGAI0B4wYGALgC
+cgUGAIcCDAQKALABBAYKAHgBuAQKAPgBuAQOAFABuQYOADoGfQYGAKACagYOADwCAgcOAFQCkgAG
+ACMI9gQOACAGuQYOANUCkgAGAAMB9gQOAAEAfAQKAJsBAgUGAPQFSQcGAIQFXQUKAGABSAUGAMcB
+agYSAHcDUwQSADQBUwQGAC8E9gQGAP0E9gQGANwA9gQGAH0IcgUGAPAHKQcGAGIG+wMSAKYEUwQG
+AEsG9gQAAAAATwAAAAAAAQABAAAAAAA6BVIITQABAAEAAAAAADgGUghRAAEAAgAAARAAKghSCGEA
+AQADAAAAAACLB1oHYQAFAAgAAAEQAN4HKwCBAAcADAABAAAAHwUrAI0ACQAPAAUBAACrBgAAYQAJ
+ABEABQEAABAAAABhAAkAGAACAQAADwgAAJUACgAaADEAuQXjADEAkAXrADEApAXzADEA0gX7ABEA
+QwYDAREAKAEHAREA0AMLAREAHQgPASEASAihAAYGgQASAVaA/wcVAVaACAEVAVAgAAAAAAYYVQYG
+AAEAWCAAAAAABhhVBgYAAQBgIAAAAAARGFsGGQEBAIogAAAAABMIKwYdAQEAliAAAAAAEwgqBSIB
+AQCiIAAAAAATCBwGJwEBAK4gAAAAABMImwYsAQEAuiAAAAAAAxhVBgYAAQDCIAAAAAAWCPAFMQEB
+AO4gAAAAABYIEAE2AQEA9SAAAAAAFggcATsBAQD9IAAAAAARGFsGGQECAA4hAAAAAAYYVQYGAAIA
+GCEAAAAAFgjYA0EBAgB0IQAAAAAGGFUGBgACAHwhAAAAAAYAJQUGAAIAiiEAAAAAxgLpB3UAAgCY
+IQAAAADGAtAAegADAKAhAAAAAIMAAAFGAQMArCEAAAAAxgImBH4AAwC0IQAAAAARAG4ASwEDANQh
+AAAAAAEAWgBTAQQAuiAAAAAABhhVBgYABQDgIQAAAAADCLcASgAFABQiAAAAAAYYVQYGAAUAAAAB
+APUDAAABAI4FAAABAMcAAAABAMcACQBVBgEAEQBVBgYAGQBVBgoAKQBVBhAAMQBVBhAAOQBVBhAA
+QQBVBhAASQBVBhAAUQBVBhAAWQBVBhUAYQBVBhUAaQBVBhAAcQBVBhAAeQBVBhAAgQBVBhoAkQBV
+BiAAqQBVBgYAsQBVBgYAuQBVBgYA0QBVBiYA6QBVBhAACQFVBgYAEQFVBgYAmQBVBgYAoQBVBgYA
+DABVBgYAFABVBgYAHABVBgYAJABVBgYADAC3AEoAFAC3AEoAHAC3AEoAJAC3AEoAwQBVBgYA2QDu
+AE8A2QB5CFcA8QBVBl0AQQHsA2UAAQFVBgYASQElBmoASQE0CGoAGQFVBgYAGQEHCG8AUQE5CAEA
+wQDpB3UAwQDQAHoAwQAmBH4AWQGoAIoANABICKEAPADYA0oAPADiA7gAPABVBgYACAAsANkACAAw
+AN4AKQCrABkDLgALAIMBLgATAIwBLgAbAKsBLgAjALQBLgArAN0BLgAzAOMBLgA7ALQBLgBDAPAB
+LgBLAN0BLgBTAA4CLgBbAN0BLgBjABQCLgBrAD4CLgBzAEsCQACLAN4AQACDAJUCQwB7AJ4CQwCD
+AJUCSQCrACoDYwB7AJ4CYwCDAJUCaQCrAD4DgACLAN4AgwCTAN4AgwCbAN4AgwB7AJ4CiQCrAEsD
+oACLAN4AqQCDAKsBwACLAN4AyQCDAKsB4ACLAN4A4wC7AN4A4wBTAN0B6QCzAN4AAwGDAJUCAwGj
+ALcCIwGDAJUCIwFbAN0BIAKDAJUCIAKLAN4AQAKDAJUCQAKLAN4AYAKDAJUCYAKLAN4AgAKDAJUC
+gAKLAN4AoAKLAN4AwAKLAN4A4AKLAN4A4AKDAJUCAAOLAN4AIAOLAN4AIAODAJUCggCVAAQAAQAF
+AAUABgAHAAkACAAAADoGWwEAADwFYAEAACAGZQEAAK0GagEAAPQFbwEAACwBdAEAAPUDeQEAALsA
+fgECAAQAAwACAAUABQACAAYABwACAAcACQACAAkACwACAAoADQABAAsADQACAA4ADwACABgAEQAu
+ADUAPABDAIcAmgCpALAABIAAAAEAAAAAAAAAAAAAAAAAKwAAAAQAAAAAAAAAAAAAAL4AiQAAAAAA
+BAAAAAAAAAAAAAAAvgD2BAAAAAAKAAAAAAAAAAAAAADHAJIAAAAAAA8AAAAAAAAAAAAAANAANAQA
+AAAAAAAAAAEAAACXBwAACAAEAAkABAAKAAcAAAAQABIAWAAAABAAKwBYAAAAAAAtAFgAYQCQAGEA
+swAAAAAAAENvbnRleHRWYWx1ZWAxAFRocmVhZFNhZmVPYmplY3RQcm92aWRlcmAxAFNUXzIyNzdh
+NzVmYzQ0NjQ3OTI4OTQ5ODk1MjkzZWY4NWU5ADxNb2R1bGU+AFQARGlzcG9zZV9fSW5zdGFuY2Vf
+XwBDcmVhdGVfX0luc3RhbmNlX18AdmFsdWVfXwBtc2NvcmxpYgBNaWNyb3NvZnQuVmlzdWFsQmFz
+aWMAQ3JlYXRlSW5zdGFuY2UAZ2V0X0dldEluc3RhbmNlAGluc3RhbmNlAEdldEhhc2hDb2RlAFJ1
+bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAEdldFR5cGUARmFpbHVyZQBnZXRfQ3Vs
+dHVyZQBzZXRfQ3VsdHVyZQBfcmVzQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UA
+QXBwbGljYXRpb25CYXNlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0
+YXRlAEd1aWRBdHRyaWJ1dGUASGVscEtleXdvcmRBdHRyaWJ1dGUAR2VuZXJhdGVkQ29kZUF0dHJp
+YnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRp
+dG9yQnJvd3NhYmxlQXR0cmlidXRlAENvbVZpc2libGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0
+dHJpYnV0ZQBTdGFuZGFyZE1vZHVsZUF0dHJpYnV0ZQBIaWRlTW9kdWxlTmFtZUF0dHJpYnV0ZQBB
+c3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUARGVidWdn
+ZXJIaWRkZW5BdHRyaWJ1dGUAQXNzZW1ibHlGaWxlVmVyc2lvbkF0dHJpYnV0ZQBNeUdyb3VwQ29s
+bGVjdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9u
+UmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29w
+eXJpZ2h0QXR0cmlidXRlAENMU0NvbXBsaWFudEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0VudHJ5
+UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmls
+aXR5QXR0cmlidXRlAG1fVmFsdWUAZ2V0X1ZhbHVlAHNldF9WYWx1ZQBHZXRPYmplY3RWYWx1ZQBT
+eXN0ZW0uVGhyZWFkaW5nAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJpbmcATWF0aABN
+aWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFz
+a3MuU2NyaXB0VGFzawBNaWNyb3NvZnQuVmlzdWFsQmFzaWMuTXlTZXJ2aWNlcy5JbnRlcm5hbABT
+Y3JpcHRPYmplY3RNb2RlbABTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU1RfMjI3N2E3NWZjNDQ2NDc5
+Mjg5NDk4OTUyOTNlZjg1ZTkuZGxsAFN5c3RlbQBFbnVtAFN5c3RlbS5Db21wb25lbnRNb2RlbC5E
+ZXNpZ24AU2NyaXB0TWFpbgBnZXRfQXBwbGljYXRpb24ATXlBcHBsaWNhdGlvbgBTeXN0ZW0uQ29u
+ZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBDdWx0dXJl
+SW5mbwBtX0FwcE9iamVjdFByb3ZpZGVyAG1fVXNlck9iamVjdFByb3ZpZGVyAG1fQ29tcHV0ZXJP
+YmplY3RQcm92aWRlcgBtX015V2ViU2VydmljZXNPYmplY3RQcm92aWRlcgBnZXRfUmVzb3VyY2VN
+YW5hZ2VyAFN5c3RlbS5Db2RlRG9tLkNvbXBpbGVyAGdldF9Vc2VyAEVudGVyAGdldF9Db21wdXRl
+cgBNeUNvbXB1dGVyAF9yZXNNZ3IAQWN0aXZhdG9yAC5jdG9yAC5jY3RvcgBNb25pdG9yAFN5c3Rl
+bS5EaWFnbm9zdGljcwBNaWNyb3NvZnQuVmlzdWFsQmFzaWMuRGV2aWNlcwBnZXRfV2ViU2Vydmlj
+ZXMATXlXZWJTZXJ2aWNlcwBNaWNyb3NvZnQuVmlzdWFsQmFzaWMuQXBwbGljYXRpb25TZXJ2aWNl
+cwBTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXMATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkNv
+bXBpbGVyU2VydmljZXMAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVz
+b3VyY2VzAFNUXzIyNzdhNzVmYzQ0NjQ3OTI4OTQ5ODk1MjkzZWY4NWU5Lk15LlJlc291cmNlcwBN
+eVJlc291cmNlcwBTVF8yMjc3YTc1ZmM0NDY0NzkyODk0OTg5NTI5M2VmODVlOS5SZXNvdXJjZXMu
+cmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAE15U2V0dGluZ3MARXF1YWxzAFJ1bnRpbWVIZWxwZXJz
+AFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAG1fU3luY09iamVjdABNeVByb2plY3QARXhp
+dABzZXRfVGFza1Jlc3VsdABtX0NvbnRleHQAU1RfMjI3N2E3NWZjNDQ2NDc5Mjg5NDk4OTUyOTNl
+Zjg1ZTkuTXkAZ2V0X0Fzc2VtYmx5AAAAADFNAHkALgBSAGUAcwBvAHUAcgBjAGUAcwAuAE0AeQBS
+AGUAcwBvAHUAcgBjAGUAcwAAAH31YdZ54bRNnzqUSmlWGugABCABAQgDIAABBSABARERBCABAQ4E
+IAEBAgUgAgEODgUgAQERRQcgBAEODg4OBhUSJAESDAYVEiQBEggGFRIkARJlBhUSJAESIAQgABMA
+BwABEm0RgJkFIAASgJ0HIAIBDhKAnQQAARwcBAABARwFIAASgKkEIAECHAMgAAgDIAAOBAcBHgAC
+HgAFEAEAHgAECgEeAAQHARMABhUSJAETAAcGFRJxARMABhUScQETAAITAAQKARMABSABARMACLd6
+XFYZNOCJCLA/X38R1Qo6CImEXc2AgMyRBAAAAAAEAQAAAAcGFRIkARIMBwYVEiQBEggHBhUSJAES
+ZQcGFRIkARIgAwYSeQMGEn0DBhIYAgYcAgYIAwYRKAMAAAEEAAASDAQAABIIBAAAEmUEAAASIAQA
+ABJ5BAAAEn0FAAEBEn0EAAASGAQgABJtBxABAR4AHgAHMAEBARAeAAQIABIMBAgAEggECAASZQQI
+ABIgBAgAEnkECAASfQQIABIYBCgAEwAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25U
+aHJvd3MBCAEAAgAAAAAAKAEAI1NUXzIyNzdhNzVmYzQ0NjQ3OTI4OTQ5ODk1MjkzZWY4NWU5AAAF
+AQAAAAAMAQAHSFAgSW5jLgAAHQEAGENvcHlyaWdodCBAIEhQIEluYy4gMjAyMQAABQEAAQAAKQEA
+JDhiODM1YjdlLTU4NTgtNDg4Yy05ODg3LTM0MDRjYWU4OTAwZQAADAEABzEuMC4wLjAAAEkBABou
+TkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBG
+cmFtZXdvcmsgNC43CAEAAQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEBADRTeXN0ZW0u
+V2ViLlNlcnZpY2VzLlByb3RvY29scy5Tb2FwSHR0cENsaWVudFByb3RvY29sEkNyZWF0ZV9fSW5z
+dGFuY2VfXxNEaXNwb3NlX19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVyAAATAQAOTXkuQXBw
+bGljYXRpb24AAAwBAAdNeS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMAAAC0AAAAzsrvvgEAAACR
+AAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQu
+MC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNT
+eXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA
+GDcAAAAAAAAAAAAAMjcAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQ3AAAAAAAAAAAAAAAAX0Nv
+ckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAACAQAAAAAAAAAAAAACAQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBGgDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAEQDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAwAAgAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAEgAUAAgAEkAbgBjAC4AAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAA
+dABpAG8AbgAAAAAAUwBUAF8AMgAyADcANwBhADcANQBmAGMANAA0ADYANAA3ADkAMgA4ADkANAA5
+ADgAOQA1ADIAOQAzAGUAZgA4ADUAZQA5AAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAA
+AAAxAC4AMAAuADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAFQAXwAy
+ADIANwA3AGEANwA1AGYAYwA0ADQANgA0ADcAOQAyADgAOQA0ADkAOAA5ADUAMgA5ADMAZQBmADgA
+NQBlADkALgBkAGwAbAAAAFYAGQABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBw
+AHkAcgBpAGcAaAB0ACAAQAAgAEgAUAAgAEkAbgBjAC4AIAAyADAAMgAxAAAAAAAqAAEAAQBMAGUA
+ZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABG
+AGkAbABlAG4AYQBtAGUAAABTAFQAXwAyADIANwA3AGEANwA1AGYAYwA0ADQANgA0ADcAOQAyADgA
+OQA0ADkAOAA5ADUAMgA5ADMAZQBmADgANQBlADkALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBj
+AHQATgBhAG0AZQAAAAAAUwBUAF8AMgAyADcANwBhADcANQBmAGMANAA0ADYANAA3ADkAMgA4ADkA
+NAA5ADgAOQA1ADIAOQAzAGUAZgA4ADUAZQA5AAAANAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBz
+AGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMA
+aQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAEQ3AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
+            </ScriptProject>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\PARENT container\Test Connection Manager"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{E0D3FBAB-1A9F-4B9F-8F25-3B2B0DD5486D}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Test Connection Manager">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\PARENT container\Test Connection Manager\EXM"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{391CAE5D-7E55-4C39-9D0E-560BDEDD7488}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="EXM"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\PARENT container\Test Connection Manager\EXM\EXM"
+                      componentClassID="Microsoft.OLEDBSource"
+                      contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                      description="OLE DB Source"
+                      name="EXM"
+                      usesDispositions="true"
+                      version="7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[dbo].[tblData]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.String"
+                          description="The variable that contains the SQL command to be executed."
+                          name="SqlCommandVariable"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">0</property>
+                        <property
+                          dataType="System.String"
+                          description="The mappings between the parameters in the SQL command and variables."
+                          name="ParameterMapping"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[EXM]"
+                          connectionManagerRefId="Package.ConnectionManagers[EXM]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output]"
+                          name="OLE DB Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[pl_id]"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_id]"
+                              name="pl_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[l_name]"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[l_name]"
+                              name="l_name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[f_name]"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[f_name]"
+                              name="f_name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[pl_name]"
+                              length="100"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_name]"
+                              name="pl_name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[t_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[t_id]"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[t_id]"
+                              name="t_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_id]"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_id]"
+                              name="p_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_num]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[pl_num]"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_num]"
+                              name="pl_num"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_code]"
+                              length="5"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_code]"
+                              name="p_code"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_name]"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_name]"
+                              name="p_name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_target]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_target]"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_target]"
+                              name="p_target"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[t_code]"
+                              length="5"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[t_code]"
+                              name="t_code"
+                              truncationRowDisposition="FailComponent" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[pl_id]"
+                              dataType="i4"
+                              name="pl_id" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="l_name" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="f_name" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              name="pl_name" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[t_id]"
+                              dataType="i4"
+                              name="t_id" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_id]"
+                              dataType="i4"
+                              name="p_id" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[pl_num]"
+                              dataType="i4"
+                              name="pl_num" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="p_code" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="p_name" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[p_target]"
+                              dataType="i4"
+                              name="p_target" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].ExternalColumns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="t_code" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output]"
+                          isErrorOut="true"
+                          name="OLE DB Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[pl_id]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[pl_id]"
+                              name="pl_id" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[l_name]"
+                              name="l_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[f_name]"
+                              name="f_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[pl_name]"
+                              name="pl_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[t_id]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[t_id]"
+                              name="t_id" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_id]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_id]"
+                              name="p_id" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[pl_num]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[pl_num]"
+                              name="pl_num" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_code]"
+                              name="p_code" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_name]"
+                              name="p_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_target]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[p_target]"
+                              name="p_target" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[t_code]"
+                              name="t_code" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\PARENT container\Test Connection Manager\EXM\Union All"
+                      componentClassID="Microsoft.UnionAll"
+                      contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                      name="Union All"
+                      version="1">
+                      <inputs>
+                        <input
+                          refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1]"
+                          name="Union All Input 1">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[pl_id]"
+                              cachedDataType="i4"
+                              cachedName="pl_id"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[l_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="l_name"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[l_name]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[l_name]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[f_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="f_name"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[f_name]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[f_name]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[pl_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="100"
+                              cachedName="pl_name"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_name]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_name]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[t_id]"
+                              cachedDataType="i4"
+                              cachedName="t_id"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[t_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[t_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[p_id]"
+                              cachedDataType="i4"
+                              cachedName="p_id"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[pl_num]"
+                              cachedDataType="i4"
+                              cachedName="pl_num"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[pl_num]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_num]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[p_code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="5"
+                              cachedName="p_code"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_code]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_code]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[p_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="p_name"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_name]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_name]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[p_target]"
+                              cachedDataType="i4"
+                              cachedName="p_target"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[p_target]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_target]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1].Columns[t_code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="5"
+                              cachedName="t_code"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output].Columns[t_code]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[t_code]}</property>
+                              </properties>
+                            </inputColumn>
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                        <input
+                          refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 2]"
+                          dangling="true"
+                          hasSideEffects="true"
+                          name="Union All Input 2">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1]"
+                          name="Union All Output 1">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_id]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_id]"
+                              name="pl_id" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[l_name]"
+                              name="l_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[f_name]"
+                              name="f_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_name]"
+                              name="pl_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[t_id]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[t_id]"
+                              name="t_id" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_id]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_id]"
+                              name="p_id" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_num]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[pl_num]"
+                              name="pl_num" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_code]"
+                              name="p_code" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_name]"
+                              name="p_name" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_target]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[p_target]"
+                              name="p_target" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              lineageId="Package\PARENT container\Test Connection Manager\EXM\Union All.Outputs[Union All Output 1].Columns[t_code]"
+                              name="t_code" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\PARENT container\Test Connection Manager\EXM.Paths[OLE DB Source Output]"
+                      endId="Package\PARENT container\Test Connection Manager\EXM\Union All.Inputs[Union All Input 1]"
+                      name="OLE DB Source Output"
+                      startId="Package\PARENT container\Test Connection Manager\EXM\EXM.Outputs[OLE DB Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\PARENT container\Test Connection Manager\SSIS_PDS"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{5F718813-2BCF-4AFE-829A-4CF171903EC3}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="SSIS_PDS"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS"
+                      componentClassID="Microsoft.OLEDBSource"
+                      contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                      description="OLE DB Source"
+                      name="SSIS_PDS"
+                      usesDispositions="true"
+                      version="7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[dbo].[Package]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.String"
+                          description="The variable that contains the SQL command to be executed."
+                          name="SqlCommandVariable"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">0</property>
+                        <property
+                          dataType="System.String"
+                          description="The mappings between the parameters in the SQL command and variables."
+                          name="ParameterMapping"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[SSIS_PDS]"
+                          connectionManagerRefId="Package.ConnectionManagers[SSIS_PDS]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output]"
+                          name="OLE DB Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageID]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[PackageID]"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageID]"
+                              name="PackageID"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageGUID]"
+                              dataType="guid"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[PackageGUID]"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageGUID]"
+                              name="PackageGUID"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageName]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[PackageName]"
+                              length="255"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageName]"
+                              name="PackageName"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[CreationDate]"
+                              dataType="dbTimeStamp"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[CreationDate]"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[CreationDate]"
+                              name="CreationDate"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[CreatedBy]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedBy]"
+                              length="255"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[CreatedBy]"
+                              name="CreatedBy"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[EnteredDateTime]"
+                              dataType="dbTimeStamp"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[EnteredDateTime]"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[EnteredDateTime]"
+                              name="EnteredDateTime"
+                              truncationRowDisposition="FailComponent" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[PackageID]"
+                              dataType="i4"
+                              name="PackageID" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[PackageGUID]"
+                              dataType="guid"
+                              name="PackageGUID" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[PackageName]"
+                              codePage="1252"
+                              dataType="str"
+                              length="255"
+                              name="PackageName" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[CreationDate]"
+                              dataType="dbTimeStamp"
+                              name="CreationDate" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedBy]"
+                              codePage="1252"
+                              dataType="str"
+                              length="255"
+                              name="CreatedBy" />
+                            <externalMetadataColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].ExternalColumns[EnteredDateTime]"
+                              dataType="dbTimeStamp"
+                              name="EnteredDateTime" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output]"
+                          isErrorOut="true"
+                          name="OLE DB Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[PackageID]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[PackageID]"
+                              name="PackageID" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[PackageGUID]"
+                              dataType="guid"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[PackageGUID]"
+                              name="PackageGUID" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[PackageName]"
+                              codePage="1252"
+                              dataType="str"
+                              length="255"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[PackageName]"
+                              name="PackageName" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[CreationDate]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[CreationDate]"
+                              name="CreationDate" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[CreatedBy]"
+                              codePage="1252"
+                              dataType="str"
+                              length="255"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[CreatedBy]"
+                              name="CreatedBy" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[EnteredDateTime]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[EnteredDateTime]"
+                              name="EnteredDateTime" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All"
+                      componentClassID="Microsoft.UnionAll"
+                      contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                      name="Union All"
+                      version="1">
+                      <inputs>
+                        <input
+                          refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1]"
+                          name="Union All Input 1">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1].Columns[PackageID]"
+                              cachedDataType="i4"
+                              cachedName="PackageID"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageID]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageID]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1].Columns[PackageGUID]"
+                              cachedDataType="guid"
+                              cachedName="PackageGUID"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageGUID]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageGUID]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1].Columns[PackageName]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="255"
+                              cachedName="PackageName"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[PackageName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1].Columns[CreationDate]"
+                              cachedDataType="dbTimeStamp"
+                              cachedName="CreationDate"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[CreationDate]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[CreationDate]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1].Columns[CreatedBy]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="255"
+                              cachedName="CreatedBy"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[CreatedBy]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[CreatedBy]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1].Columns[EnteredDateTime]"
+                              cachedDataType="dbTimeStamp"
+                              cachedName="EnteredDateTime"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output].Columns[EnteredDateTime]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[EnteredDateTime]}</property>
+                              </properties>
+                            </inputColumn>
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                        <input
+                          refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 2]"
+                          dangling="true"
+                          hasSideEffects="true"
+                          name="Union All Input 2">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1]"
+                          name="Union All Output 1">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageID]"
+                              dataType="i4"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageID]"
+                              name="PackageID" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageGUID]"
+                              dataType="guid"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageGUID]"
+                              name="PackageGUID" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageName]"
+                              codePage="1252"
+                              dataType="str"
+                              length="255"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[PackageName]"
+                              name="PackageName" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[CreationDate]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[CreationDate]"
+                              name="CreationDate" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[CreatedBy]"
+                              codePage="1252"
+                              dataType="str"
+                              length="255"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[CreatedBy]"
+                              name="CreatedBy" />
+                            <outputColumn
+                              refId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[EnteredDateTime]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Outputs[Union All Output 1].Columns[EnteredDateTime]"
+                              name="EnteredDateTime" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\PARENT container\Test Connection Manager\SSIS_PDS.Paths[OLE DB Source Output]"
+                      endId="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All.Inputs[Union All Input 1]"
+                      name="OLE DB Source Output"
+                      startId="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS.Outputs[OLE DB Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\PARENT container\Test Log Variable Value Changed"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{9778A871-0462-42EB-AA29-2C4EE154CBB2}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Test Log Variable Value Changed">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\PARENT container\Test Log Variable Value Changed\Initial Date Time"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{FA075D5E-E0E8-4D69-969C-23C6B38DEF7C}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Initial Date Time"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{EBE425FC-825F-4D63-8E4A-C776181BF249}"
+                  SQLTask:SqlStatementSource="SELECT GETDATE() as v_get_date;"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="v_get_date"
+                    SQLTask:DtsVariableName="User::v_get_date" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\PARENT container\Test Log Variable Value Changed\Updated Date Time"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{9A96D9F4-6725-4664-B2DB-1CCF7803CD37}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Updated Date Time"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{EBE425FC-825F-4D63-8E4A-C776181BF249}"
+                  SQLTask:SqlStatementSource="SELECT GETDATE()  + 100 as v_get_date;"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="v_get_date"
+                    SQLTask:DtsVariableName="User::v_get_date" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\PARENT container\Test Log Variable Value Changed.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{8EA73EB1-E6C5-4429-A891-CE827CE8DAFF}"
+              DTS:From="Package\PARENT container\Test Log Variable Value Changed\Initial Date Time"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\PARENT container\Test Log Variable Value Changed\Updated Date Time" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{28EB9C34-2170-479E-888B-31A3E632E5F4}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL LogPackageEnd"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{BE99875D-2648-4532-97E5-B7ECA8086A7D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL LogPackageEnd"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+          SQLTask:SqlStatementSource="exec dbo.LogPackageEnd&#xA;@PackageLogID = ?&#xA;,@BatchLogID = ?&#xA;,@EndBatchAudit = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageLogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::BatchLogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::EndBatchAudit"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="17"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL LogPackageStart"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0E64B4FD-6D37-4BEF-929D-F458C4D2401F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL LogPackageStart"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+          SQLTask:SqlStatementSource="exec dbo.LogPackageStart&#xA;@BatchLogID = ?&#xA;,@PackageName = ?&#xA;,@ExecutionInstanceID = ?&#xA;,@MachineName = ?&#xA;,@UserName = ?&#xA;,@StartDatetime = ?&#xA;,@PackageVersionGUID = ?&#xA;,@VersionMajor = ?&#xA;,@VersionMinor = ?&#xA;,@VersionBuild = ?&#xA;,@VersionComment = ?&#xA;,@PackageGUID = ?&#xA;,@CreationDate = ?&#xA;,@CreatedBy = ?&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="BatchLogID"
+            SQLTask:DtsVariableName="User::BatchLogID" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="PackageLogID"
+            SQLTask:DtsVariableName="User::PackageLogID" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="EndBatchAudit"
+            SQLTask:DtsVariableName="User::EndBatchAudit" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::BatchLogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="System::MachineName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="System::UserName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="5"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="6"
+            SQLTask:DtsVariableName="System::VersionGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="7"
+            SQLTask:DtsVariableName="System::VersionMajor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="8"
+            SQLTask:DtsVariableName="System::VersionMinor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="9"
+            SQLTask:DtsVariableName="System::VersionBuild"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="10"
+            SQLTask:DtsVariableName="System::VersionComments"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="11"
+            SQLTask:DtsVariableName="System::PackageID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="12"
+            SQLTask:DtsVariableName="System::CreationDate"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="13"
+            SQLTask:DtsVariableName="System::CreatorName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F5430647-7436-4519-8F47-3F6F0B6D48AE}"
+      DTS:From="Package\SQL LogPackageStart"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\PARENT container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{011B3887-F93F-41C1-A5DA-28A99093BB8A}"
+      DTS:From="Package\PARENT container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL LogPackageEnd" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{375D723D-EE0C-463A-B225-B482FE3D580B}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{FBBF4B44-91DE-4024-918D-30683CE74AEC}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SQL LogPackageError"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{531CE615-DF59-48F6-AE6A-9C51DB9CAEAD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL LogPackageError"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+              SQLTask:SqlStatementSource="exec dbo.LogPackageError&#xA;@PackageLogID = ?&#xA;,@BatchLogID = ?&#xA;,@SourceName = ?&#xA;,@SourceID = ?&#xA;,@ErrorCode = ?&#xA;,@ErrorDescription = ?&#xA;,@EndBatchAudit = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::BatchLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="User::EndBatchAudit"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="17"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnPostExecute]"
+      DTS:CreationName="OnPostExecute"
+      DTS:DTSID="{473BAB3A-E909-4F3B-AED7-E94558F7A4E7}"
+      DTS:EventID="0"
+      DTS:EventName="OnPostExecute"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{82383296-8F28-496B-AD63-5348E060E63F}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SQL Log TaskPostExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{A66C083D-A0A0-43E2-A03A-9063764907CA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL Log TaskPostExecute"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+              SQLTask:SqlStatementSource="exec dbo.LogTaskPostExecute&#xA;@PackageLogID = ?&#xA;,@SourceID = ?&#xA;,@PackageID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::PackageID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnPreExecute]"
+      DTS:CreationName="OnPreExecute"
+      DTS:DTSID="{26AD6211-A027-4946-A40F-9B5317669056}"
+      DTS:EventID="-1"
+      DTS:EventName="OnPreExecute"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{F23113C6-A4C9-4999-BBC5-A6D6895D5B37}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPreExecute]\SQL Log TaskAPreExecuted"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{A135A6B9-A179-4DDB-8FFC-0D4A05042EEF}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL Log TaskAPreExecuted"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+              SQLTask:SqlStatementSource="exec dbo.LogTaskPreExecute&#xA;@PackageLogID = ?&#xA;,@SourceName = ?&#xA;,@SourceID = ?&#xA;,@PackageID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::PackageID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnVariableValueChanged]"
+      DTS:CreationName="OnVariableValueChanged"
+      DTS:DTSID="{E037FDB9-4F1B-426A-884C-1513C99587F1}"
+      DTS:EventID="787541532"
+      DTS:EventName="OnVariableValueChanged"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{58006213-68C4-4289-852D-3293513949FB}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged]\SCR Convert value to string"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="Script Task"
+          DTS:DTSID="{4EE1CE5A-D09D-4055-98D7-CD2AA831F3D1}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SCR Convert value to string">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_2419cff8b94f4273b55cb80c8fc62913"
+              VSTAMajorVersion="15"
+              VSTAMinorVersion="0"
+              Language="VisualBasic"
+              ReadOnlyVariables="System::VariableValue"
+              ReadWriteVariables="User::strVariableValue">
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_2419cff8b94f4273b55cb80c8fc62913")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("HP Inc.")> 
+<Assembly: AssemblyProduct("ST_2419cff8b94f4273b55cb80c8fc62913")> 
+<Assembly: AssemblyCopyright("Copyright @ HP Inc. 2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("7460469e-3ab9-4d0e-ae98-08994fbacaf7")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_2419cff8b94f4273b55cb80c8fc62913</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_2419cff8b94f4273b55cb80c8fc62913</msb:DisplayName>
+    <msb:ProjectId>{DFFCE950-0E99-41CD-875C-D96871E23316}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_2419cff8b94f4273b55cb80c8fc62913.vbproj" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="ST_2419cff8b94f4273b55cb80c8fc62913.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a045dba9-9093-433c-b551-b6929ab4c223}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ST_2419cff8b94f4273b55cb80c8fc62913</RootNamespace>
+    <AssemblyName>ST_2419cff8b94f4273b55cb80c8fc62913</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScriptMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+              <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        Try
+            Dim sVarValue As String = Dts.Variables("VariableValue").Value.ToString
+            Dts.Variables("strVariableValue").Value = sVarValue
+        Catch ex As Exception
+            Dts.Variables("strVariableValue").Value = "Unable to Convert to String: " _
+ & ex.Message
+        End Try
+
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.resx"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+Namespace My.Resources
+    
+    '''<summary>
+    '''   A strongly-typed resource class, for looking up localized strings, etc.
+    '''</summary>
+    'This class was auto-generated by the Strongly Typed Resource Builder
+    'class via a tool like ResGen or Visual Studio.NET.
+    'To add or remove a member, edit your .ResX file then rerun ResGen
+    'with the /str option, or rebuild your VS project.
+    Class MyResources
+        
+        Private Shared _resMgr As System.Resources.ResourceManager
+        
+        Private Shared _resCulture As System.Globalization.CultureInfo
+        
+        Friend Sub New()
+            MyBase.New
+        End Sub
+        
+        '''<summary>
+        '''   Returns the cached ResourceManager instance used by this class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
+            Get
+                If (_resMgr Is Nothing) Then
+                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
+                    _resMgr = temp
+                End If
+                Return _resMgr
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   Overrides the current thread's CurrentUICulture property for all
+        '''   resource lookups using this strongly typed resource class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared Property Culture() As System.Globalization.CultureInfo
+            Get
+                Return _resCulture
+            End Get
+            Set
+                _resCulture = value
+            End Set
+        End Property
+    End Class
+End Namespace]]></ProjectItem>
+              <BinaryItem
+                Name="ST_2419cff8b94f4273b55cb80c8fc62913.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAG0GH2AAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAijkA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADg5AABPAAAAAEAAAGQEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAkBkAAAAgAAAAGgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAGQEAAAAQAAAAAYAAAAcAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABs
+OQAAAAAAAEgAAAACAAUAvCIAAMQVAAABAAAAAAAAAIA4AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBgAAAoqHgIoGQAACiqmcxoAAAqAAQAABHMbAAAKgAIA
+AARzHAAACoADAAAEcx0AAAqABAAABCoufgEAAARvHgAACioufgIAAARvHwAACioufgMAAARvIAAA
+CioufgQAAARvIQAACioeAigiAAAKKq5+BQAABC0ecgEAAHDQBQAAAigjAAAKbyQAAApzJQAACoAF
+AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqQnMiAAAKKCYAAAqACAAABCoeAignAAAKKgAAGzABAD8A
+AAAAAAAAfgcAAAQtMn4IAAAEKCYAAAooKAAACn4HAAAELRxzDQAABoAHAAAE3hB+CAAABCgmAAAK
+KCkAAArcfgcAAAQqAAEQAAACAB0ADCkAEAAAAAAeAigqAAAKKhswAwCCAAAAAQAAEQIoKwAACm8s
+AAAKcjMAAHBvLQAACm8uAAAKby8AAAoKAigrAAAKbywAAApyTwAAcG8tAAAKBm8wAAAK3jglKDEA
+AAoLAigrAAAKbywAAApyTwAAcG8tAAAKcnEAAHAHbzIAAAooMwAACm8wAAAKKDQAAAreAAIoKwAA
+ChZvNQAACioAAAEQAAAAAAAAPT0AOCUAAAE2AgMoJgAACig2AAAKKh4CKDcAAAoqLtAIAAACKCMA
+AAoqHgIoLwAACioAABMwAQAUAAAAAgAAEQKMBQAAGy0IKAEAACsKKwICCgYqIgP+FQUAABsqAAAA
+EzACACgAAAADAAARAns5AAAKbzoAAAoKBowIAAAbLRIoAgAAKwoCezkAAAoGbzsAAAoGKkoCKCIA
+AAoCczwAAAp9OQAACioAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAA3AcAACN+
+AABICAAAMAkAACNTdHJpbmdzAAAAAHgRAACwAAAAI1VTACgSAAAQAAAAI0dVSUQAAAA4EgAAjAMA
+ACNCbG9iAAAAAAAAAAIAAAFXHaIJCQ8AAAD6ATMAFgAAAQAAADAAAAAKAAAADAAAABkAAAAEAAAA
+PAAAAAIAAAA3AAAAAwAAAAQAAAAIAAAACQAAAAgAAAABAAAABQAAAAEAAAADAAAAAwAAAAIAAAAA
+AC4FAQAAAAAABgBtA74HBgASBL4HBgBEAv8GDwBkCAAABgCFAtsFBgBQA9sFBgD5A9sFBgCNA9sF
+BgCmA9sFBgDMAtsFBgDBA18FBgBxAngHBgDtAXgHBgAYA9sFBgDnAmwECgAQAncGCgDYARgFCgBY
+AhgFDgCwAU4HDgCtBhIHBgAAA/8GDgCcApcHDgC0Ar0ABgDNCF8FDgCTBk4HDgA1A70ABgBjAV8F
+DgABANwECgD7AWsFBgBnBt4HBgD3BcYFCgDAAbEFBgAnAv8GEgDXA7MEEgCUAbMEBgCPBF8FBgDt
+BV8FBgBmBV8FBgAcAV8FBgAnCdsFBgCTCL4HBgD3BlsEEgAGBbMEFgB3CEABFgATAUABDgCoAJcH
+BgCIBF8FBgDgBl8FAAAAAE8AAAAAAAEAAQAAAAAAowX8CE0AAQABAAAAAACrBvwIUQABAAIAAAEQ
+ANQI/AhhAAEAAwAAAAAAIAjvB2EABQAIAAABEACBCCsAgQAHAAwAAQAAAIgFKwCNAAkADwAFAQAA
+QAcAAGEACQARAAUBAAAQAAAAYQAJABgAAgEAALIIAACZAAoAGgAxACwGEQExAAMGGQExABcGIQEx
+AEUGKQERALYGMQERAIgBNQERADAEOQERAMcIPQEhAPIIzwAGBqAAQAFWgKIIQwFWgGgBQwFQIAAA
+AAAGGOoGBgABAFggAAAAAAYY6gYGAAEAYCAAAAAAERjwBqMAAQCKIAAAAAATCJ4GRwEBAJYgAAAA
+ABMIkwVMAQEAoiAAAAAAEwiPBlEBAQCuIAAAAAATCDAHVgEBALogAAAAAAMY6gYGAAEAwiAAAAAA
+FghjBlsBAQDuIAAAAAAWCHABYAEBAPUgAAAAABYIfAFlAQEA/SAAAAAAERjwBqMAAgAOIQAAAAAG
+GOoGBgACABghAAAAABYIOARrAQIAdCEAAAAABhjqBgYAAgB8IQAAAAAGAI4FBgACABwiAAAAAMYC
+jAinAAIAKiIAAAAAxgL7AKwAAwAyIgAAAACDAGABcAEDAD4iAAAAAMYChgSNAAMASCIAAAAAEQCN
+AHUBAwBoIgAAAAABAHkAfQEEALogAAAAAAYY6gYGAAUAdCIAAAAAAwjiAEoABQCoIgAAAAAGGOoG
+BgAFAAAAAQBVBAAAAQABBgAAAQDyAAAAAQDyAAkA6gYBABEA6gYGABkA6gYKACkA6gYQADEA6gYQ
+ADkA6gYQAEEA6gYQAEkA6gYQAFEA6gYQAFkA6gYVAGEA6gYVAGkA6gYQAHEA6gYQAHkA6gYQAIEA
+6gYaAJEA6gYgAKkA6gYGALEA6gYGALkA6gYGANEA6gYmAOkA6gYQAAkB6gYGABEB6gYGAJkA6gYG
+AKEA6gYGAAwA6gYGABQA6gYGABwA6gYGACQA6gYGAAwA4gBKABQA4gBKABwA4gBKACQA4gBKAMEA
+6gYGANkALgFPANkAIwlXAPEA6gZdAEkBTARlAAEB6gYGAFEBmAZqAFEB3ghqABkB6gYGABkBqgh2
+AFkBcwh8AGEBVgWCAGkBOASJAMEAhgSNAGkBQgSRAHEB0AaWACkBBwGNAHkBwAidAHEBvgajAFkB
+4wgBAMEAjAinAMEA+wCsAIEB0wC4ADQA8gjPADwAOARKADwAQgTmADwA6gYGAAgALAAHAQgAMAAM
+ASkAqwBDAy4ACwCtAS4AEwC2AS4AGwDVAS4AIwDeAS4AKwAHAi4AMwANAi4AOwDeAS4AQwAaAi4A
+SwAHAi4AUwA4Ai4AWwAHAi4AYwA+Ai4AawBoAi4AcwB1AkAAiwAMAUAAgwC/AkMAewDIAkMAgwC/
+AkkAqwBUA2MAewDIAmMAgwC/AmkAqwBoA4AAiwAMAYMAkwAMAYMAmwAMAYMAewDIAokAqwB1A6AA
+iwAMAakAgwDVAcAAiwAMAckAgwDVAeAAiwAMAeMAuwAMAeMAUwAHAukAswAMAQMBgwC/AgMBowDh
+AiMBgwC/AiMBWwAHAiACgwC/AiACiwAMAUACgwC/AkACiwAMAWACgwC/AmACiwAMAYACgwC/AoAC
+iwAMAaACiwAMAcACiwAMAeACiwAMAeACgwC/AgADiwAMASADiwAMASADgwC/Am8AsADDAAQAAQAF
+AAUABgAHAAkACAAAAK0GhQEAAKUFigEAAJMGjwEAAEIHlAEAAGcGmQEAAIwBngEAAFUEowEAAOYA
+qAECAAQAAwACAAUABQACAAYABwACAAcACQACAAkACwACAAoADQABAAsADQACAA4ADwACABgAEQAu
+ADUAPABDALUAyADXAN4ABIAAAAEAAAAAAAAAAAAAAAAAKwAAAAQAAAAAAAAAAAAAAOwAtAAAAAAA
+BAAAAAAAAAAAAAAA7ABfBQAAAAAKAAAAAAAAAAAAAAD1AL0AAAAAAA8AAAAAAAAAAAAAAP4AlAQA
+AAAADwAAAAAAAAAAAAAA/gBYAAAAAAAAAAAAAQAAACwIAAAIAAQACQAEAAoABwAAABAAEgB3AAAA
+EAArAHcAAAAAAC0AdwBxAL4AcQDhAAAAAAAAQ29udGV4dFZhbHVlYDEAVGhyZWFkU2FmZU9iamVj
+dFByb3ZpZGVyYDEAU1RfMjQxOWNmZjhiOTRmNDI3M2I1NWNiODBjOGZjNjI5MTMAPE1vZHVsZT4A
+TWljcm9zb2Z0LlNxbFNlcnZlci5NYW5hZ2VkRFRTAFQARGlzcG9zZV9fSW5zdGFuY2VfXwBDcmVh
+dGVfX0luc3RhbmNlX18AdmFsdWVfXwBQcm9qZWN0RGF0YQBtc2NvcmxpYgBNaWNyb3NvZnQuVmlz
+dWFsQmFzaWMAQ3JlYXRlSW5zdGFuY2UAZ2V0X0dldEluc3RhbmNlAGluc3RhbmNlAEdldEhhc2hD
+b2RlAGdldF9NZXNzYWdlAFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFu
+ZGxlAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAR2V0VHlwZQBGYWlsdXJlAGdldF9D
+dWx0dXJlAHNldF9DdWx0dXJlAF9yZXNDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFz
+ZQBBcHBsaWNhdGlvbkJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxl
+U3RhdGUAR3VpZEF0dHJpYnV0ZQBIZWxwS2V5d29yZEF0dHJpYnV0ZQBHZW5lcmF0ZWRDb2RlQXR0
+cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBF
+ZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQ29tVmlzaWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxl
+QXR0cmlidXRlAFN0YW5kYXJkTW9kdWxlQXR0cmlidXRlAEhpZGVNb2R1bGVOYW1lQXR0cmlidXRl
+AEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBEZWJ1
+Z2dlckhpZGRlbkF0dHJpYnV0ZQBBc3NlbWJseUZpbGVWZXJzaW9uQXR0cmlidXRlAE15R3JvdXBD
+b2xsZWN0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRp
+b25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlD
+b3B5cmlnaHRBdHRyaWJ1dGUAQ0xTQ29tcGxpYW50QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNrRW50
+cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGli
+aWxpdHlBdHRyaWJ1dGUAbV9WYWx1ZQBnZXRfVmFsdWUAc2V0X1ZhbHVlAEdldE9iamVjdFZhbHVl
+AFN5c3RlbS5UaHJlYWRpbmcAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBNYXRo
+AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5U
+YXNrcy5TY3JpcHRUYXNrAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5NeVNlcnZpY2VzLkludGVybmFs
+AFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25lbnRNb2RlbABTVF8yNDE5Y2ZmOGI5NGY0
+MjczYjU1Y2I4MGM4ZmM2MjkxMy5kbGwAZ2V0X0l0ZW0AU3lzdGVtAEVudW0AU3lzdGVtLkNvbXBv
+bmVudE1vZGVsLkRlc2lnbgBTY3JpcHRNYWluAGdldF9BcHBsaWNhdGlvbgBNeUFwcGxpY2F0aW9u
+AFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0
+aW9uAEV4Y2VwdGlvbgBDdWx0dXJlSW5mbwBtX0FwcE9iamVjdFByb3ZpZGVyAG1fVXNlck9iamVj
+dFByb3ZpZGVyAG1fQ29tcHV0ZXJPYmplY3RQcm92aWRlcgBtX015V2ViU2VydmljZXNPYmplY3RQ
+cm92aWRlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAFN5c3RlbS5Db2RlRG9tLkNvbXBpbGVyAGdldF9V
+c2VyAEVudGVyAGdldF9Db21wdXRlcgBNeUNvbXB1dGVyAF9yZXNNZ3IAQ2xlYXJQcm9qZWN0RXJy
+b3IAU2V0UHJvamVjdEVycm9yAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IATW9uaXRvcgBTeXN0ZW0u
+RGlhZ25vc3RpY3MATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkRldmljZXMAZ2V0X1dlYlNlcnZpY2Vz
+AE15V2ViU2VydmljZXMATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkFwcGxpY2F0aW9uU2VydmljZXMA
+U3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5Db21w
+aWxlclNlcnZpY2VzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291
+cmNlcwBTVF8yNDE5Y2ZmOGI5NGY0MjczYjU1Y2I4MGM4ZmM2MjkxMy5NeS5SZXNvdXJjZXMATXlS
+ZXNvdXJjZXMAU1RfMjQxOWNmZjhiOTRmNDI3M2I1NWNiODBjOGZjNjI5MTMuUmVzb3VyY2VzLnJl
+c291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBnZXRfVmFyaWFibGVzAE15U2V0dGluZ3MARXF1YWxzAFJ1
+bnRpbWVIZWxwZXJzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAENvbmNhdABtX1N5bmNP
+YmplY3QATXlQcm9qZWN0AEV4aXQAc2V0X1Rhc2tSZXN1bHQAbV9Db250ZXh0AFNUXzI0MTljZmY4
+Yjk0ZjQyNzNiNTVjYjgwYzhmYzYyOTEzLk15AGdldF9Bc3NlbWJseQAAMU0AeQAuAFIAZQBzAG8A
+dQByAGMAZQBzAC4ATQB5AFIAZQBzAG8AdQByAGMAZQBzAAAbVgBhAHIAaQBhAGIAbABlAFYAYQBs
+AHUAZQAAIXMAdAByAFYAYQByAGkAYQBiAGwAZQBWAGEAbAB1AGUAADtVAG4AYQBiAGwAZQAgAHQA
+bwAgAEMAbwBuAHYAZQByAHQAIAB0AG8AIABTAHQAcgBpAG4AZwA6ACAAAAAAAJjblDRL5MZFgAqW
+gpgGonwABCABAQgDIAABBSABARERBCABAQ4EIAEBAgUgAgEODgUgAQERRQcgBAEODg4OBhUSJAES
+DAYVEiQBEggGFRIkARJlBhUSJAESIAQgABMABwABEm0RgJ0FIAASgKEHIAIBDhKAoQQAARwcBAAB
+ARwGBwIOEoCVBSAAEoCtBSAAEoCxBiABEoC1HAMgABwDIAAOBCABARwGAAEBEoCVBQACDg4OAwAA
+AQQgAQIcAyAACAQHAR4AAh4ABRABAB4ABAoBHgAEBwETAAYVEiQBEwAHBhUScQETAAYVEnEBEwAC
+EwAECgETAAUgAQETAAi3elxWGTTgiQiwP19/EdUKOgiJhF3NgIDMkQQAAAAABAEAAAAHBhUSJAES
+DAcGFRIkARIIBwYVEiQBEmUHBhUSJAESIAMGEnkDBhJ9AwYSGAIGHAIGCAMGESgEAAASDAQAABII
+BAAAEmUEAAASIAQAABJ5BAAAEn0FAAEBEn0EAAASGAQgABJtBxABAR4AHgAHMAEBARAeAAQIABIM
+BAgAEggECAASZQQIABIgBAgAEnkECAASfQQIABIYBCgAEwAIAQAIAAAAAAAeAQABAFQCFldyYXBO
+b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NUXzI0MTljZmY4Yjk0ZjQyNzNiNTVjYjgw
+YzhmYzYyOTEzAAAFAQAAAAAMAQAHSFAgSW5jLgAAHQEAGENvcHlyaWdodCBAIEhQIEluYy4gMjAy
+MQAABQEAAQAAKQEAJDc0NjA0NjllLTNhYjktNGQwZS1hZTk4LTA4OTk0ZmJhY2FmNwAADAEABzEu
+MC4wLjAAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxh
+eU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43CAEAAQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAA
+AGEBADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlByb3RvY29scy5Tb2FwSHR0cENsaWVudFByb3RvY29s
+EkNyZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3NlX19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVy
+AAATAQAOTXkuQXBwbGljYXRpb24AAAwBAAdNeS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMAAAAA
+ALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3Js
+aWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdh
+NWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAA
+AAAAUEFEUEFEULQAAABgOQAAAAAAAAAAAAB6OQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbDkA
+AAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAA
+AFhAAAAIBAAAAAAAAAAAAAAIBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAA
+vQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAAB
+AFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAA
+AAAAALAEaAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAARAMAAAEAMAAwADAAMAAw
+ADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAADAACAABAEMAbwBtAHAAYQBuAHkA
+TgBhAG0AZQAAAAAASABQACAASQBuAGMALgAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0
+AGkAbwBuAAAAAABTAFQAXwAyADQAMQA5AGMAZgBmADgAYgA5ADQAZgA0ADIANwAzAGIANQA1AGMA
+YgA4ADAAYwA4AGYAYwA2ADIAOQAxADMAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAA
+ADEALgAwAC4AMAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAVABfADIA
+NAAxADkAYwBmAGYAOABiADkANABmADQAMgA3ADMAYgA1ADUAYwBiADgAMABjADgAZgBjADYAMgA5
+ADEAMwAuAGQAbABsAAAAVgAZAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAA
+eQByAGkAZwBoAHQAIABAACAASABQACAASQBuAGMALgAgADIAMAAyADEAAAAAACoAAQABAEwAZQBn
+AGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYA
+aQBsAGUAbgBhAG0AZQAAAFMAVABfADIANAAxADkAYwBmAGYAOABiADkANABmADQAMgA3ADMAYgA1
+ADUAYwBiADgAMABjADgAZgBjADYAMgA5ADEAMwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMA
+dABOAGEAbQBlAAAAAABTAFQAXwAyADQAMQA5AGMAZgBmADgAYgA5ADQAZgA0ADIANwAzAGIANQA1
+AGMAYgA4ADAAYwA4AGYAYwA2ADIAOQAxADMAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMA
+aQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBp
+AG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAjDkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+            </ScriptProject>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{AB515DD8-CDE6-48E7-9AA8-56E6950BD06F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL LogVariableValueChanged"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DFB53974-4E06-4F18-9428-D6AA25C7F894}"
+              SQLTask:SqlStatementSource="exec dbo.LogVariableValueChanged&#xA;@PackageLogID = ?&#xA;,@VariableName = ?&#xA;,@VariableValue = ?&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::VariableName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::strVariableValue"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1533034D-6327-4538-A8E6-74FD68E5BA33}"
+          DTS:From="Package.EventHandlers[OnVariableValueChanged]\SCR Convert value to string"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="188,42"
+          Id="Package\SQL LogPackageStart"
+          TopLeft="321.5,5.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\SQL LogPackageEnd"
+          TopLeft="323,519" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\PARENT container\MsgBox check Variable"
+          TopLeft="5.5,108.5" />
+        <NodeLayout
+          Size="103,42"
+          Id="Package\PARENT container\Test Connection Manager\EXM"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\PARENT container\Test Connection Manager\SSIS_PDS"
+          TopLeft="169.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="308,102"
+          Size="308,146"
+          Id="Package\PARENT container\Test Connection Manager"
+          TopLeft="260.5,56.4999999999999" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\PARENT container\Test Log Variable Value Changed\Initial Date Time"
+          TopLeft="13.5,5.5" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\PARENT container\Test Log Variable Value Changed\Updated Date Time"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Test Log Variable Value Changed.PrecedenceConstraints[Constraint]"
+          TopLeft="92.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="185,204"
+          Size="185,248"
+          Id="Package\PARENT container\Test Log Variable Value Changed"
+          TopLeft="629,5.49999999999989" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="820,308"
+          Size="820,351"
+          Id="Package\PARENT container"
+          TopLeft="5.5,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="415.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="415.5,458.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60.5"
+              Start="0,0"
+              End="0,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="/*****************************************************************************************************************&#xD;&#xA;NAME:    dbo.usp_LoadSSISConfigurations&#xD;&#xA;PURPOSE: Load the SSIS Configurations table&#xD;&#xA;&#xD;&#xA;MODIFICATION LOG:&#xD;&#xA;Ver      Date        Author           Description&#xD;&#xA;-------  ----------  ---------------  ------------------------------------------------------------------------&#xD;&#xA;1.0      11/03/2019  JJAUSSI          1. Created this process for LDS BC IT243&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;RUNTIME: &#xD;&#xA;approx 5 sec&#xD;&#xA;&#xD;&#xA;NOTES:  &#xD;&#xA;Load configured variable values for these levels...&#xD;&#xA;1) System = CommonConfigurations&#xD;&#xA;2) Solution&#xD;&#xA;3) Package&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Loads configuration managers for common configuration managers used in template package&#xD;&#xA;&#xD;&#xA;Connect strings are loaded with passwords to allow for automation of SSIS ETL based packages&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;Example usage...&#xD;&#xA;&#xD;&#xA;EXEC dbo.usp_LoadSSISConfigurations;&#xD;&#xA;&#xD;&#xA;SELECT c.*&#xD;&#xA;  FROM dbo.[SSIS Configurations] as c;&#xD;&#xA;         &#xD;&#xA;******************************************************************************************************************/&#xD;&#xA;&#xD;&#xA;    TRUNCATE TABLE dbo.[SSIS Configurations];&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 1) Common Configurations&#xD;&#xA;&#xD;&#xA;    DELETE FROM dbo.[SSIS Configurations]&#xD;&#xA;     WHERE ConfigurationFilter = 'CommonConfigurations';&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 1.1) conn_EXM&#xD;&#xA;&#xD;&#xA;    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter&#xD;&#xA;                                        , ConfiguredValue&#xD;&#xA;                                        , PackagePath&#xD;&#xA;                                        , ConfiguredValueType)&#xD;&#xA;    VALUES&#xD;&#xA;          (&#xD;&#xA;           'CommonConfigurations'&#xD;&#xA;         , 'Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;'&#xD;&#xA;         , '\Package.Variables[User::conn_EXM].Properties[Value]'&#xD;&#xA;         , 'String'&#xD;&#xA;          );&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 1.2) conn_DFNB&#xD;&#xA;&#xD;&#xA;    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter&#xD;&#xA;                                        , ConfiguredValue&#xD;&#xA;                                        , PackagePath&#xD;&#xA;                                        , ConfiguredValueType)&#xD;&#xA;    VALUES&#xD;&#xA;          (&#xD;&#xA;           'CommonConfigurations'&#xD;&#xA;         , 'Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;'&#xD;&#xA;         , '\Package.Variables[User::conn_DFNB3].Properties[Value]'&#xD;&#xA;         , 'String'&#xD;&#xA;          );&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 2) Solution Level Configurations&#xD;&#xA;&#xD;&#xA; -- 2.1) LDSBC_IT243_gz  &#xD;&#xA; &#xD;&#xA; DELETE FROM dbo.[SSIS Configurations]&#xD;&#xA;     WHERE ConfigurationFilter = 'LDSBC_IT243_gz';&#xD;&#xA; &#xD;&#xA;&#xD;&#xA; -- 2.1.1) v_data_share_root&#xD;&#xA;&#xD;&#xA;    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter&#xD;&#xA;                                        , ConfiguredValue&#xD;&#xA;                                        , PackagePath&#xD;&#xA;                                        , ConfiguredValueType)&#xD;&#xA;    VALUES&#xD;&#xA;          (&#xD;&#xA;           'LDSBC_IT243_gz'&#xD;&#xA;   , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'&#xD;&#xA;         , '\Package.Variables[User::v_data_share_root].Properties[Value]'&#xD;&#xA;         , 'String'&#xD;&#xA;          );&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 3) Package level configurations&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 3.1) SSIS_PDS_Template_gz&#xD;&#xA;&#xD;&#xA;    DELETE FROM dbo.[SSIS Configurations]&#xD;&#xA;     WHERE ConfigurationFilter = 'SSIS_PDS_Template_gz';&#xD;&#xA; &#xD;&#xA;&#xD;&#xA; -- 3.1.1) v_data_share_root&#xD;&#xA;&#xD;&#xA;    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter&#xD;&#xA;                                        , ConfiguredValue&#xD;&#xA;                                        , PackagePath&#xD;&#xA;                                        , ConfiguredValueType)&#xD;&#xA;    VALUES&#xD;&#xA;          (&#xD;&#xA;           'SSIS_PDS_Template_gz'&#xD;&#xA;   , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'&#xD;&#xA;         , '\Package.Variables[User::v_data_share_root].Properties[Value]'&#xD;&#xA;         , 'String'&#xD;&#xA;          );&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    -- 3.2) LoadDFNB3_gz&#xD;&#xA;&#xD;&#xA;    DELETE FROM dbo.[SSIS Configurations]&#xD;&#xA;     WHERE ConfigurationFilter = 'LoadDFNB3_gz';&#xD;&#xA; &#xD;&#xA;&#xD;&#xA; -- 3.1.1) v_data_share_root&#xD;&#xA;&#xD;&#xA;    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter&#xD;&#xA;                                        , ConfiguredValue&#xD;&#xA;                                        , PackagePath&#xD;&#xA;                                        , ConfiguredValueType)&#xD;&#xA;    VALUES&#xD;&#xA;          (&#xD;&#xA;           'LoadDFNB3_gz'&#xD;&#xA;   , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'&#xD;&#xA;         , '\Package.Variables[User::v_data_share_root].Properties[Value]'&#xD;&#xA;         , 'String'&#xD;&#xA;          );&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;END;&#xD;&#xA;&#xD;&#xA;GO&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"
+          ParentId="Package\Sequence Container"
+          Size="716,2149"
+          Id="a16ce781-0ec5-4415-abea-c07cc201fc3a"
+          TopLeft="7,21">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Times New Roman"
+              Size="12"
+              Color="#FF0000FF">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="728,50"
+          Size="202,43"
+          Id="Package\Sequence Container"
+          TopLeft="568.5,518.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="190,42"
+          Id="Package.EventHandlers[OnError]\SQL LogPackageError"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="219,42"
+          Id="Package.EventHandlers[OnPreExecute]\SQL Log TaskAPreExecuted"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnPostExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="211,42"
+          Id="Package.EventHandlers[OnPostExecute]\SQL Log TaskPostExecute"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnVariableValueChanged]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="215,42"
+          Id="Package.EventHandlers[OnVariableValueChanged]\SCR Convert value to string"
+          TopLeft="16,5.5" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package.EventHandlers[OnVariableValueChanged].PrecedenceConstraints[Constraint]"
+          TopLeft="123.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\PARENT container\Test Connection Manager\EXM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="103,42"
+          Id="Package\PARENT container\Test Connection Manager\EXM\EXM"
+          TopLeft="15.5,5.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\PARENT container\Test Connection Manager\EXM\Union All"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Test Connection Manager\EXM.Paths[OLE DB Source Output]"
+          TopLeft="67,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\PARENT container\Test Connection Manager\SSIS_PDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\PARENT container\Test Connection Manager\SSIS_PDS\Union All"
+          TopLeft="10.5,107.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Test Connection Manager\SSIS_PDS.Paths[OLE DB Source Output]"
+          TopLeft="72,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Test Connection Manager\EXM\EXM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Test Connection Manager\SSIS_PDS\SSIS_PDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
