@@ -26,6 +26,7 @@ Ver      Date        Author           Description
 1.0      11/03/2019  JJAUSSI          1. Created this process for LDS BC IT243
 1.1      2/06/2021  JJAUSSI          1. Added conn_DFNB3 connection
 1.2      2/19/2021  JJAUSSI          1.Added LoadDFNB3_GZ configuration 
+1.3      03/06/2021  JJAUSSI          1.Added LoadEXM_GZ configuration 
 
 
 RUNTIME: 
@@ -169,15 +170,7 @@ SELECT c.*
 
 
 
-
-
-
-
-
-
-
-
-
+   --DUPLICATE FROM LOADDFNB3_GZ
     -- 3.2) LoadDFNB3_xx
 
     DELETE FROM dbo.[SSIS Configurations]
@@ -198,6 +191,27 @@ SELECT c.*
          , 'String'
           );
 
+
+		  
+    -- 3.3) LoadEXM_GZ
+
+    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadEXM_GZ';
+	
+
+	-- 3.3.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadEXM_GZ'
+		 , 'C:\REPOS\EXM_gz\txt_files\'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
 
 END;
 
