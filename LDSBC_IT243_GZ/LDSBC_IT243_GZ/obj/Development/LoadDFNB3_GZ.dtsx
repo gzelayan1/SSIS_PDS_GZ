@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadDFNB3_GZ"
   DTS:PackageType="5"
-  DTS:VersionBuild="79"
-  DTS:VersionGUID="{B23C6502-BDB2-4452-B2AC-EE1F10138976}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{69C6C396-6AC2-4FAD-9242-BE9956BBEFD8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -18647,11 +18647,89 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="781,2738"
           Size="176,43"
           Id="Package\Documentation"
-          TopLeft="5.50000000000006,725.5" />
+          TopLeft="5.50000000000006,724.5" />
         <NodeLayout
           Size="194,42"
           Id="Package\MsgBox check Variable"
-          TopLeft="242.5,726" />
+          TopLeft="242.5,725" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\PARENT container\Load Nums"
+          TopLeft="264.5,5.49999999999989" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\PARENT container\Reload Nums-ADO\Truncate Nums"
+          TopLeft="11.5,5.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Reload Nums-ADO.PrecedenceConstraints[Constraint]"
+          TopLeft="88.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="177,204"
+          Size="177,248"
+          Id="Package\PARENT container\Reload Nums-ADO"
+          TopLeft="243.5,159.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\PARENT container\Reload Nums-OLE_DB\Truncate Nums"
+          TopLeft="11.5,5.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Reload Nums-OLE_DB.PrecedenceConstraints[Constraint]"
+          TopLeft="88.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="177,204"
+          Size="177,248"
+          Id="Package\PARENT container\Reload Nums-OLE_DB"
+          TopLeft="5.5,159.5" />
         <NodeLayout
           Size="155,42"
           Id="Package\PARENT container\Relow raw data-Flat File\Foreach Loop Container\Data Flow Task"
@@ -18749,51 +18827,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="366,308"
           Size="366,352"
           Id="Package\PARENT container\Relow raw data-Flat File"
-          TopLeft="5.5,107.5" />
-        <NodeLayout
-          Size="135,42"
-          Id="Package\PARENT container\Load Nums"
-          TopLeft="691,5.49999999999989" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\PARENT container\Reload Nums-OLE_DB\Truncate Nums"
-          TopLeft="11.5,5.5" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM"
-          TopLeft="5.50000000000001,107.5" />
-        <EdgeLayout
-          Id="Package\PARENT container\Reload Nums-OLE_DB.PrecedenceConstraints[Constraint]"
-          TopLeft="88.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="177,204"
-          Size="177,248"
-          Id="Package\PARENT container\Reload Nums-OLE_DB"
-          TopLeft="432,159.5" />
+          TopLeft="481,107.5" />
         <EdgeLayout
           Id="Package\PARENT container.PrecedenceConstraints[Constraint]"
-          TopLeft="737.333333333333,47.4999999999999">
+          TopLeft="310.833333333333,47.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -18804,17 +18841,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5871156661786" />
+                    End="0,41.5871156661787" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.5871156661786"
-                    Point2="0,45.5871156661786"
-                    Point3="-4,45.5871156661786" />
+                    Point1="0,41.5871156661787"
+                    Point2="0,45.5871156661787"
+                    Point3="-4,45.5871156661787" />
                   <mssgle:LineSegment
-                    End="-212.833333333333,45.5871156661786" />
+                    End="-212.833333333333,45.5871156661787" />
                   <mssgle:CubicBezierSegment
-                    Point1="-212.833333333333,45.5871156661786"
-                    Point2="-216.833333333333,45.5871156661786"
-                    Point3="-216.833333333333,49.5871156661786" />
+                    Point1="-212.833333333333,45.5871156661787"
+                    Point2="-216.833333333333,45.5871156661787"
+                    Point3="-216.833333333333,49.5871156661787" />
                   <mssgle:LineSegment
                     End="-216.833333333333,104.5" />
                 </mssgle:SegmentCollection>
@@ -18823,50 +18860,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-116.416666666667,50.5871156661786,16,16"
+              BoundingBox="-116.416666666667,50.5871156661787,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM"
-          TopLeft="5.50000000000001,107.5" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\PARENT container\Reload Nums-ADO\Truncate Nums"
-          TopLeft="11.5,5.5" />
-        <EdgeLayout
-          Id="Package\PARENT container\Reload Nums-ADO.PrecedenceConstraints[Constraint]"
-          TopLeft="88.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="177,204"
-          Size="177,248"
-          Id="Package\PARENT container\Reload Nums-ADO"
-          TopLeft="670,159.5" />
         <EdgeLayout
           Id="Package\PARENT container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="779.666666666667,47.4999999999999">
+          TopLeft="353.166666666667,47.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -18904,13 +18904,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="852,514"
-          Size="852,558"
+          Size="852,557"
           Id="Package\PARENT container"
           TopLeft="163.5,107.5" />
         <NodeLayout
           Size="185,42"
           Id="Package\SQL LogPackageEnd"
-          TopLeft="497,726" />
+          TopLeft="497,725" />
         <NodeLayout
           Size="188,42"
           Id="Package\SQL LogPackageStart"
@@ -18939,7 +18939,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="589.5,665.5">
+          TopLeft="589.5,664.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -19038,6 +19038,129 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\PARENT container\Reload Nums-ADO\Reload from EXM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM\OLE DB Destination"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM\ADO NET Source"
+          TopLeft="12,5.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM.Paths[ADO NET Source Output]"
+          TopLeft="94.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Reload Nums-ADO\Reload from EXM\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Reload Nums-ADO\Reload from EXM\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Destination"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Source"
+          TopLeft="15.5,5.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM.Paths[OLE DB Source Output]"
+          TopLeft="94,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\PARENT container\Relow raw data-Flat File\Foreach Loop Container\Data Flow Task">
     <LayoutInfo>
@@ -19424,129 +19547,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Source"
-          TopLeft="15.5,5.5" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Destination"
-          TopLeft="5.50000000000001,107.5" />
-        <EdgeLayout
-          Id="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM.Paths[OLE DB Source Output]"
-          TopLeft="94,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\PARENT container\Reload Nums-OLE_DB\Reload from EXM\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\PARENT container\Reload Nums-ADO\Reload from EXM">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="177,42"
-          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM\OLE DB Destination"
-          TopLeft="5.50000000000001,107.5" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM\ADO NET Source"
-          TopLeft="12,5.5" />
-        <EdgeLayout
-          Id="Package\PARENT container\Reload Nums-ADO\Reload from EXM.Paths[ADO NET Source Output]"
-          TopLeft="94.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\PARENT container\Reload Nums-ADO\Reload from EXM\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\PARENT container\Reload Nums-ADO\Reload from EXM\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
