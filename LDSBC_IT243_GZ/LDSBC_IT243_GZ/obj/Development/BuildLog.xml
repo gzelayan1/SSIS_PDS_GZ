@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>LDSBC_IT243_GZ</Name>
-    <LastWriteTime>2021-03-06T23:37:03.6899492Z</LastWriteTime>
+    <LastWriteTime>2021-03-15T05:46:37.8456406Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,12 +13,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadDFNB3_GZ.dtsx</Name>
-      <LastWriteTime>2021-03-07T00:46:09.3630059Z</LastWriteTime>
+      <LastWriteTime>2021-03-15T05:46:37.7739951Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadEXM_GZ.dtsx</Name>
-      <LastWriteTime>2021-03-06T23:31:24.5252536Z</LastWriteTime>
+      <LastWriteTime>2021-03-10T23:14:47.0598524Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadNAICSCodeHierDim_GZ.dtsx</Name>
+      <LastWriteTime>2021-03-15T05:50:13.7898156Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

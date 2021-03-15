@@ -27,6 +27,7 @@ Ver      Date        Author           Description
 1.1      2/06/2021   JJAUSSI          1. Added conn_DFNB3 connection
 1.2      2/19/2021   JJAUSSI          1.Added LoadDFNB3_GZ configuration 
 1.3      03/06/2021  JJAUSSI          1.Added LoadEXM_GZ configuration 
+1.4      03/06/2021  JJAUSSI          1.Added LoadNAICSCodeHierDim_GZ configuration 
 
 
 RUNTIME: 
@@ -209,6 +210,29 @@ SELECT c.*
           (
            'LoadEXM_GZ'
 		 , 'C:\REPOS\EXM_gz\txt_files\'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
+
+
+--LoadNAICSCodeHierDim_GZ
+
+-- 3.4) LoadNAICSCodeHierDim_GZ
+
+    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadNAICSCodeHierDim_GZ';
+	
+
+	-- 3.4.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadNAICSCodeHierDim_GZ'
+		 , 'C:\REPOS\DFNB_dw_gz\xlx_FILES\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
