@@ -113,7 +113,7 @@ SELECT c.*
     VALUES
           (
            'LDSBC_IT243_xx'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -139,7 +139,7 @@ SELECT c.*
     VALUES
           (
            'SSIS_PDS_Template_xx'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -162,7 +162,7 @@ SELECT c.*
     VALUES
           (
            'LoadDFNB3_GZ'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -187,7 +187,7 @@ SELECT c.*
     VALUES
           (
            'LoadDFNB3_xx'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\REPOS\DFNB_src_gz\DFNB_src-master\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
