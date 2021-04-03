@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadDFNB3_GZ"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{C5F315DD-6E49-4A23-880D-E5980BA27F6B}">
+  DTS:VersionBuild="143"
+  DTS:VersionGUID="{799D5420-14D5-40D6-9726-5C07A566EDC9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -197,6 +197,151 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="C:\REPOS\SSIS_PDS_gz\LDSBC_IT243_GZ\LDSBC_IT243_GZ\LoadNAICSCodeHierDim_GZ.dtsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Organization Hierarchy.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{05413993-6323-4C14-A408-F8CAB0A14507}"
+      DTS:ObjectName="Organization Hierarchy.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\REPOS\DFNB_dw_gz\csv_files\Organization Hierarchy.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="branch_id"
+              DTS:DTSID="{39E87579-0D88-461A-8EEC-899F42540A58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="branch_code"
+              DTS:DTSID="{2E839FAF-864A-4231-B47C-33DC44BFF99A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="branch_desc"
+              DTS:DTSID="{7F185058-08AA-4B93-9968-D9178EA51D88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_id"
+              DTS:DTSID="{D3DF22C7-22FB-4B6C-9F0E-DAA65A789915}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_desc"
+              DTS:DTSID="{1CAC2BA1-CEEF-4246-BC98-05AF6DD87637}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="area_id"
+              DTS:DTSID="{7151C217-65EC-489F-BC5B-5099ADEE6A3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="area_desc"
+              DTS:DTSID="{145ECD35-1B19-43AF-A682-7F5D3A5A9242}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Product Profiles.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{966E180B-3A2A-4A75-AB2C-047801616E8D}"
+      DTS:ObjectName="Product Profiles.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\REPOS\DFNB_dw_gz\csv_files\Product Profiles.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prod_id"
+              DTS:DTSID="{D986ECE7-FDDE-4CD7-944F-7F539877B0FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prod_code"
+              DTS:DTSID="{C4F43000-6E36-4C79-99D8-8CD5746672DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prod_desc"
+              DTS:DTSID="{C6385F13-C688-4582-836A-4EB5203F3F0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="revolve_ind"
+              DTS:DTSID="{245D47F6-2774-417A-9469-0ADAA771C482}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="20"
+              DTS:DataScale="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loan_amt_lmt"
+              DTS:DTSID="{7DB6D696-4ECD-4FE2-B26B-9F779B3C3547}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -4507,6 +4652,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:refId="Package\PARENT container\Load dimentions"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
+          DTS:Disabled="True"
           DTS:DTSID="{4B2D4CB3-12E1-4492-9379-83D1F24EF0EF}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
@@ -4553,6 +4699,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:refId="Package\PARENT container\Nums"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
+          DTS:Disabled="True"
           DTS:DTSID="{5E8D26DD-C53A-43D3-AEA0-045D803CEE07}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
@@ -5162,7 +5309,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:refId="Package\PARENT container\Relow raw data-Flat File"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
-          DTS:Disabled="True"
           DTS:DTSID="{1F47F7AF-A4CA-49BE-BE74-25EFD23F576F}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
@@ -5173,6 +5319,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
               DTS:refId="Package\PARENT container\Relow raw data-Flat File\Foreach Loop Container"
               DTS:CreationName="STOCK:FOREACHLOOP"
               DTS:Description="Foreach Loop Container"
+              DTS:Disabled="True"
               DTS:DTSID="{45C5B0AB-C9CB-4826-9456-EB4EA0A02BE7}"
               DTS:ExecutableType="STOCK:FOREACHLOOP"
               DTS:LocaleID="-1"
@@ -6916,6 +7063,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
               DTS:refId="Package\PARENT container\Relow raw data-Flat File\Load data"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Data Flow Task"
+              DTS:Disabled="True"
               DTS:DTSID="{B3D2B671-C566-4B5C-8F05-3369B9456D04}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
@@ -18417,9 +18565,946 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
+              DTS:refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy"
+              DTS:CreationName="STOCK:SEQUENCE"
+              DTS:Description="Sequence Container"
+              DTS:DTSID="{8f6b5a21-5b0f-4cb0-82df-089c8d0fa6fd}"
+              DTS:ExecutableType="STOCK:SEQUENCE"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Organization Hiearchy">
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data"
+                  DTS:CreationName="Microsoft.Pipeline"
+                  DTS:Description="Data Flow Task"
+                  DTS:DTSID="{3e616fe9-d846-42fd-8ccf-b7dd9e35477d}"
+                  DTS:ExecutableType="Microsoft.Pipeline"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Load Data"
+                  DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <pipeline
+                      version="1">
+                      <components>
+                        <component
+                          refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv"
+                          componentClassID="Microsoft.FlatFileSource"
+                          contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                          description="Flat File Source"
+                          localeId="1033"
+                          name="Organization Hierarchy csv"
+                          usesDispositions="true"
+                          version="1">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Specifies whether zero-length columns are treated as null."
+                              name="RetainNulls">false</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                              name="FileNameColumnName"></property>
+                          </properties>
+                          <connections>
+                            <connection
+                              refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Connections[FlatFileConnection]"
+                              connectionManagerID="Package.ConnectionManagers[Organization Hierarchy.csv]"
+                              connectionManagerRefId="Package.ConnectionManagers[Organization Hierarchy.csv]"
+                              name="FlatFileConnection" />
+                          </connections>
+                          <outputs>
+                            <output
+                              refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output]"
+                              name="Flat File Source Output">
+                              <outputColumns>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_id]"
+                                  dataType="i2"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[branch_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_id]"
+                                  name="branch_id"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_code]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[branch_code]"
+                                  length="5"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_code]"
+                                  name="branch_code"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[branch_desc]"
+                                  length="25"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_desc]"
+                                  name="branch_desc"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[region_id]"
+                                  dataType="i2"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[region_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[region_id]"
+                                  name="region_id"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[region_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[region_desc]"
+                                  length="25"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[region_desc]"
+                                  name="region_desc"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[area_id]"
+                                  dataType="i2"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[area_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[area_id]"
+                                  name="area_id"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[area_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[area_desc]"
+                                  length="25"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[area_desc]"
+                                  name="area_desc"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                              </outputColumns>
+                              <externalMetadataColumns
+                                isUsed="True">
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[branch_id]"
+                                  dataType="i2"
+                                  name="branch_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[branch_code]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="5"
+                                  name="branch_code" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[branch_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="25"
+                                  name="branch_desc" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[region_id]"
+                                  dataType="i2"
+                                  name="region_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[region_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="25"
+                                  name="region_desc" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[area_id]"
+                                  dataType="i2"
+                                  name="area_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].ExternalColumns[area_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="25"
+                                  name="area_desc" />
+                              </externalMetadataColumns>
+                            </output>
+                            <output
+                              refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output]"
+                              isErrorOut="true"
+                              name="Flat File Source Error Output">
+                              <outputColumns>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                                  codePage="1252"
+                                  dataType="text"
+                                  description="Flat File Source Error Output Column"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                                  name="Flat File Source Error Output Column" />
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                                  name="ErrorCode"
+                                  specialFlags="1" />
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                                  name="ErrorColumn"
+                                  specialFlags="2" />
+                              </outputColumns>
+                              <externalMetadataColumns />
+                            </output>
+                          </outputs>
+                        </component>
+                        <component
+                          refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER"
+                          componentClassID="Microsoft.OLEDBDestination"
+                          contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                          description="OLE DB Destination"
+                          name="stg_ORG_HIER"
+                          usesDispositions="true"
+                          version="4">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                              name="CommandTimeout">0</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the name of the database object used to open a rowset."
+                              name="OpenRowset">[stg].[ORG_HIER]</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the variable that contains the name of the database object used to open a rowset."
+                              name="OpenRowsetVariable"></property>
+                            <property
+                              dataType="System.String"
+                              description="The SQL command to be executed."
+                              name="SqlCommand"
+                              UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the column code page to use when code page information is unavailable from the data source."
+                              name="DefaultCodePage">1252</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Forces the use of the DefaultCodePage property value when describing character data."
+                              name="AlwaysUseDefaultCodePage">false</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the mode used to access the database."
+                              name="AccessMode"
+                              typeConverter="AccessMode">3</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                              name="FastLoadKeepIdentity">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                              name="FastLoadKeepNulls">false</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                              name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                              name="FastLoadMaxInsertCommitSize">2147483647</property>
+                          </properties>
+                          <connections>
+                            <connection
+                              refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Connections[OleDbConnection]"
+                              connectionManagerID="Package.ConnectionManagers[DFNB3]"
+                              connectionManagerRefId="Package.ConnectionManagers[DFNB3]"
+                              description="The OLE DB runtime connection used to access the database."
+                              name="OleDbConnection" />
+                          </connections>
+                          <inputs>
+                            <input
+                              refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input]"
+                              errorOrTruncationOperation="Insert"
+                              errorRowDisposition="FailComponent"
+                              hasSideEffects="true"
+                              name="OLE DB Destination Input">
+                              <inputColumns>
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[branch_id]"
+                                  cachedDataType="i2"
+                                  cachedName="branch_id"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[branch_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_id]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[branch_code]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="5"
+                                  cachedName="branch_code"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[branch_code]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_code]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[branch_desc]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="25"
+                                  cachedName="branch_desc"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[branch_desc]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[branch_desc]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[region_id]"
+                                  cachedDataType="i2"
+                                  cachedName="region_id"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[region_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[region_id]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[region_desc]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="25"
+                                  cachedName="region_desc"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[region_desc]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[region_desc]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[area_id]"
+                                  cachedDataType="i2"
+                                  cachedName="area_id"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[area_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[area_id]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].Columns[area_desc]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="25"
+                                  cachedName="area_desc"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[area_desc]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output].Columns[area_desc]" />
+                              </inputColumns>
+                              <externalMetadataColumns
+                                isUsed="True">
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[branch_id]"
+                                  dataType="i2"
+                                  name="branch_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[branch_code]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="5"
+                                  name="branch_code" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[branch_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="25"
+                                  name="branch_desc" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[region_id]"
+                                  dataType="i2"
+                                  name="region_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[region_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="25"
+                                  name="region_desc" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[area_id]"
+                                  dataType="i2"
+                                  name="area_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input].ExternalColumns[area_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="25"
+                                  name="area_desc" />
+                              </externalMetadataColumns>
+                            </input>
+                          </inputs>
+                          <outputs>
+                            <output
+                              refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Outputs[OLE DB Destination Error Output]"
+                              exclusionGroup="1"
+                              isErrorOut="true"
+                              name="OLE DB Destination Error Output"
+                              synchronousInputId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input]">
+                              <outputColumns>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                                  name="ErrorCode"
+                                  specialFlags="1" />
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                                  name="ErrorColumn"
+                                  specialFlags="2" />
+                              </outputColumns>
+                              <externalMetadataColumns />
+                            </output>
+                          </outputs>
+                        </component>
+                      </components>
+                      <paths>
+                        <path
+                          refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data.Paths[Flat File Source Output]"
+                          endId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER.Inputs[OLE DB Destination Input]"
+                          name="Flat File Source Output"
+                          startId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv.Outputs[Flat File Source Output]" />
+                      </paths>
+                    </pipeline>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+                <DTS:Executable
+                  DTS:refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Truncate Data"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{b6c55620-70cc-4c04-beaf-b3bc645c6744}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Truncate Data"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="3">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{E202BDE2-00F7-46E7-AA41-042B2AAC9326}"
+                      SQLTask:SqlStatementSource="TRUNCATE TABLE stg.ORG_HIER;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:PrecedenceConstraints>
+                <DTS:PrecedenceConstraint
+                  DTS:refId="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy.PrecedenceConstraints[Constraint]"
+                  DTS:CreationName=""
+                  DTS:DTSID="{fe77738c-7c18-4626-887b-e81cc363d26e}"
+                  DTS:From="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Truncate Data"
+                  DTS:LogicalAnd="True"
+                  DTS:ObjectName="Constraint"
+                  DTS:To="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data" />
+              </DTS:PrecedenceConstraints>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container"
+              DTS:CreationName="STOCK:SEQUENCE"
+              DTS:Description="Sequence Container"
+              DTS:DTSID="{584244AA-B3B1-43D9-96E3-90C4D8200B3B}"
+              DTS:ExecutableType="STOCK:SEQUENCE"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Sequence Container">
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data"
+                  DTS:CreationName="Microsoft.Pipeline"
+                  DTS:Description="Data Flow Task"
+                  DTS:DTSID="{7E7F2C68-36C2-4B14-BE4B-4CD109722B88}"
+                  DTS:ExecutableType="Microsoft.Pipeline"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Load Data"
+                  DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <pipeline
+                      version="1">
+                      <components>
+                        <component
+                          refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv"
+                          componentClassID="Microsoft.FlatFileSource"
+                          contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                          description="Flat File Source"
+                          localeId="1033"
+                          name="Product Profiles csv"
+                          usesDispositions="true"
+                          version="1">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Specifies whether zero-length columns are treated as null."
+                              name="RetainNulls">false</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                              name="FileNameColumnName"></property>
+                          </properties>
+                          <connections>
+                            <connection
+                              refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Connections[FlatFileConnection]"
+                              connectionManagerID="Package.ConnectionManagers[Product Profiles.csv]"
+                              connectionManagerRefId="Package.ConnectionManagers[Product Profiles.csv]"
+                              name="FlatFileConnection" />
+                          </connections>
+                          <outputs>
+                            <output
+                              refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output]"
+                              name="Flat File Source Output">
+                              <outputColumns>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_id]"
+                                  dataType="i2"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[prod_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_id]"
+                                  name="prod_id"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_code]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[prod_code]"
+                                  length="10"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_code]"
+                                  name="prod_code"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[prod_desc]"
+                                  length="50"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_desc]"
+                                  name="prod_desc"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[revolve_ind]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[revolve_ind]"
+                                  length="1"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[revolve_ind]"
+                                  name="revolve_ind"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[loan_amt_lmt]"
+                                  dataType="numeric"
+                                  errorOrTruncationOperation="Conversion"
+                                  errorRowDisposition="FailComponent"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[loan_amt_lmt]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[loan_amt_lmt]"
+                                  name="loan_amt_lmt"
+                                  precision="20"
+                                  scale="4"
+                                  truncationRowDisposition="FailComponent">
+                                  <properties>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                      name="FastParse">false</property>
+                                    <property
+                                      dataType="System.Boolean"
+                                      description="Indicates whether the data is in binary format."
+                                      name="UseBinaryFormat">false</property>
+                                  </properties>
+                                </outputColumn>
+                              </outputColumns>
+                              <externalMetadataColumns
+                                isUsed="True">
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[prod_id]"
+                                  dataType="i2"
+                                  name="prod_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[prod_code]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="10"
+                                  name="prod_code" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[prod_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="50"
+                                  name="prod_desc" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[revolve_ind]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="1"
+                                  name="revolve_ind" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].ExternalColumns[loan_amt_lmt]"
+                                  dataType="numeric"
+                                  name="loan_amt_lmt"
+                                  precision="20"
+                                  scale="4" />
+                              </externalMetadataColumns>
+                            </output>
+                            <output
+                              refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output]"
+                              isErrorOut="true"
+                              name="Flat File Source Error Output">
+                              <outputColumns>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                                  codePage="1252"
+                                  dataType="text"
+                                  description="Flat File Source Error Output Column"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                                  name="Flat File Source Error Output Column" />
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                                  name="ErrorCode"
+                                  specialFlags="1" />
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                                  name="ErrorColumn"
+                                  specialFlags="2" />
+                              </outputColumns>
+                              <externalMetadataColumns />
+                            </output>
+                          </outputs>
+                        </component>
+                        <component
+                          refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES"
+                          componentClassID="Microsoft.OLEDBDestination"
+                          contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                          description="OLE DB Destination"
+                          name="stg_PRODUCT_PROFILES"
+                          usesDispositions="true"
+                          version="4">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                              name="CommandTimeout">0</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the name of the database object used to open a rowset."
+                              name="OpenRowset">[stg].[PRODUCT_PROFILES]</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the variable that contains the name of the database object used to open a rowset."
+                              name="OpenRowsetVariable"></property>
+                            <property
+                              dataType="System.String"
+                              description="The SQL command to be executed."
+                              name="SqlCommand"
+                              UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the column code page to use when code page information is unavailable from the data source."
+                              name="DefaultCodePage">1252</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Forces the use of the DefaultCodePage property value when describing character data."
+                              name="AlwaysUseDefaultCodePage">false</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the mode used to access the database."
+                              name="AccessMode"
+                              typeConverter="AccessMode">3</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                              name="FastLoadKeepIdentity">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                              name="FastLoadKeepNulls">false</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                              name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                              name="FastLoadMaxInsertCommitSize">2147483647</property>
+                          </properties>
+                          <connections>
+                            <connection
+                              refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Connections[OleDbConnection]"
+                              connectionManagerID="Package.ConnectionManagers[DFNB3]"
+                              connectionManagerRefId="Package.ConnectionManagers[DFNB3]"
+                              description="The OLE DB runtime connection used to access the database."
+                              name="OleDbConnection" />
+                          </connections>
+                          <inputs>
+                            <input
+                              refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input]"
+                              errorOrTruncationOperation="Insert"
+                              errorRowDisposition="FailComponent"
+                              hasSideEffects="true"
+                              name="OLE DB Destination Input">
+                              <inputColumns>
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].Columns[prod_id]"
+                                  cachedDataType="i2"
+                                  cachedName="prod_id"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[prod_id]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_id]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].Columns[prod_code]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="10"
+                                  cachedName="prod_code"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[prod_code]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_code]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].Columns[prod_desc]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="50"
+                                  cachedName="prod_desc"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[prod_desc]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[prod_desc]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].Columns[revolve_ind]"
+                                  cachedCodepage="1252"
+                                  cachedDataType="str"
+                                  cachedLength="1"
+                                  cachedName="revolve_ind"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[revolve_ind]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[revolve_ind]" />
+                                <inputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].Columns[loan_amt_lmt]"
+                                  cachedDataType="numeric"
+                                  cachedName="loan_amt_lmt"
+                                  cachedPrecision="20"
+                                  cachedScale="4"
+                                  externalMetadataColumnId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[loan_amt_lmt]"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output].Columns[loan_amt_lmt]" />
+                              </inputColumns>
+                              <externalMetadataColumns
+                                isUsed="True">
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[prod_id]"
+                                  dataType="i2"
+                                  name="prod_id" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[prod_code]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="10"
+                                  name="prod_code" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[prod_desc]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="50"
+                                  name="prod_desc" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[revolve_ind]"
+                                  codePage="1252"
+                                  dataType="str"
+                                  length="1"
+                                  name="revolve_ind" />
+                                <externalMetadataColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input].ExternalColumns[loan_amt_lmt]"
+                                  dataType="numeric"
+                                  name="loan_amt_lmt"
+                                  precision="20"
+                                  scale="4" />
+                              </externalMetadataColumns>
+                            </input>
+                          </inputs>
+                          <outputs>
+                            <output
+                              refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Outputs[OLE DB Destination Error Output]"
+                              exclusionGroup="1"
+                              isErrorOut="true"
+                              name="OLE DB Destination Error Output"
+                              synchronousInputId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input]">
+                              <outputColumns>
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                                  name="ErrorCode"
+                                  specialFlags="1" />
+                                <outputColumn
+                                  refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                                  dataType="i4"
+                                  lineageId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                                  name="ErrorColumn"
+                                  specialFlags="2" />
+                              </outputColumns>
+                              <externalMetadataColumns />
+                            </output>
+                          </outputs>
+                        </component>
+                      </components>
+                      <paths>
+                        <path
+                          refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data.Paths[Flat File Source Output]"
+                          endId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES.Inputs[OLE DB Destination Input]"
+                          name="Flat File Source Output"
+                          startId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv.Outputs[Flat File Source Output]" />
+                      </paths>
+                    </pipeline>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+                <DTS:Executable
+                  DTS:refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Truncate Data"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{CDEEE564-1B8C-4FB3-B587-B568F1F3D982}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Truncate Data"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="2">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{E202BDE2-00F7-46E7-AA41-042B2AAC9326}"
+                      SQLTask:SqlStatementSource="TRUNCATE TABLE  stg.PRODUCT_PROFILES;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:PrecedenceConstraints>
+                <DTS:PrecedenceConstraint
+                  DTS:refId="Package\PARENT container\Relow raw data-Flat File\Sequence Container.PrecedenceConstraints[Constraint]"
+                  DTS:CreationName=""
+                  DTS:DTSID="{0ED01C93-E5C4-4566-9891-2031ABCB81F1}"
+                  DTS:From="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Truncate Data"
+                  DTS:LogicalAnd="True"
+                  DTS:ObjectName="Constraint"
+                  DTS:To="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data" />
+              </DTS:PrecedenceConstraints>
+            </DTS:Executable>
+            <DTS:Executable
               DTS:refId="Package\PARENT container\Relow raw data-Flat File\Truncate data"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
+              DTS:Disabled="True"
               DTS:DTSID="{DE13AF66-2764-4104-9611-1DD08E2D3910}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
@@ -19654,11 +20739,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="781,2738"
           Size="176,43"
           Id="Package\Documentation"
-          TopLeft="5.50000000000006,622.5" />
+          TopLeft="5.50000000000017,929.5" />
         <NodeLayout
           Size="194,42"
           Id="Package\MsgBox check Variable"
-          TopLeft="242.5,623" />
+          TopLeft="242.5,930" />
         <NodeLayout
           Size="155,42"
           Id="Package\PARENT container\Branch Tran file breakout\Foreach Loop Container\Data Flow Task"
@@ -19728,15 +20813,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="185,410"
           Size="225,43"
           Id="Package\PARENT container\Branch Tran file breakout"
-          TopLeft="523.5,108.5" />
+          TopLeft="523.5,518.5" />
         <NodeLayout
           Size="172,42"
           Id="Package\PARENT container\Data Profiling Task"
-          TopLeft="291,109" />
+          TopLeft="291,519" />
         <NodeLayout
           Size="225,42"
           Id="Package\PARENT container\LoadNAICSCodeHierDim_GZ"
-          TopLeft="5.5,109" />
+          TopLeft="5.5,519" />
         <NodeLayout
           Size="155,42"
           Id="Package\PARENT container\Relow raw data-Flat File\Foreach Loop Container\Data Flow Task"
@@ -19744,123 +20829,197 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="166,103"
+          PanelSize="166,102"
           Size="166,146"
           Id="Package\PARENT container\Relow raw data-Flat File\Foreach Loop Container"
-          TopLeft="194.5,107.5" />
+          TopLeft="194.5,158.5" />
         <NodeLayout
           Size="128,42"
           Id="Package\PARENT container\Relow raw data-Flat File\Load data"
-          TopLeft="5.50000000000006,159.5" />
+          TopLeft="5.5,210.5" />
         <NodeLayout
           Size="147,42"
           Id="Package\PARENT container\Relow raw data-Flat File\Truncate data"
-          TopLeft="204,5.5" />
+          TopLeft="204,5.49999999999989" />
         <EdgeLayout
           Id="Package\PARENT container\Relow raw data-Flat File.PrecedenceConstraints[Constraint]"
-          TopLeft="254.333333333333,47.5">
+          TopLeft="254.333333333333,47.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-184.833333333333,112"
+              EndConnector="-184.833333333333,163"
               Start="0,0"
-              End="-184.833333333333,104.5">
+              End="-184.833333333333,155.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5235531628533" />
+                    End="0,62.2530282637955" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.5235531628533"
-                    Point2="0,45.5235531628533"
-                    Point3="-4,45.5235531628533" />
+                    Point1="0,62.2530282637955"
+                    Point2="0,66.2530282637955"
+                    Point3="-4,66.2530282637955" />
                   <mssgle:LineSegment
-                    End="-180.833333333333,45.5235531628533" />
+                    End="-180.833333333333,66.2530282637955" />
                   <mssgle:CubicBezierSegment
-                    Point1="-180.833333333333,45.5235531628533"
-                    Point2="-184.833333333333,45.5235531628533"
-                    Point3="-184.833333333333,49.5235531628533" />
+                    Point1="-180.833333333333,66.2530282637955"
+                    Point2="-184.833333333333,66.2530282637955"
+                    Point3="-184.833333333333,70.2530282637955" />
                   <mssgle:LineSegment
-                    End="-184.833333333333,104.5" />
+                    End="-184.833333333333,155.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-100.416666666667,50.5235531628533,16,16"
+              BoundingBox="-100.416666666667,71.2530282637955,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\PARENT container\Relow raw data-Flat File.PrecedenceConstraints[Constraint 1]"
-          TopLeft="300.666666666667,47.5">
+          TopLeft="300.666666666667,47.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-23.1666666666666,60"
+              EndConnector="-23.1666666666666,111"
               Start="0,0"
-              End="-23.1666666666666,52.5">
+              End="-23.1666666666666,103.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.3876177658143" />
+                    End="0,41.1170928667564" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.3876177658143"
-                    Point2="0,24.3876177658143"
-                    Point3="-4,24.3876177658143" />
+                    Point1="0,41.1170928667564"
+                    Point2="0,45.1170928667564"
+                    Point3="-4,45.1170928667564" />
                   <mssgle:LineSegment
-                    End="-19.1666666666666,24.3876177658143" />
+                    End="-19.1666666666666,45.1170928667564" />
                   <mssgle:CubicBezierSegment
-                    Point1="-19.1666666666666,24.3876177658143"
-                    Point2="-23.1666666666666,24.3876177658143"
-                    Point3="-23.1666666666666,28.3876177658143" />
+                    Point1="-19.1666666666666,45.1170928667564"
+                    Point2="-23.1666666666666,45.1170928667564"
+                    Point3="-23.1666666666666,49.1170928667564" />
                   <mssgle:LineSegment
-                    End="-23.1666666666666,52.5" />
+                    End="-23.1666666666666,103.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.5833333333333,29.3876177658143,16,16"
+              BoundingBox="-19.5833333333333,50.1170928667564,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="366,309"
-          Size="220,43"
-          Id="Package\PARENT container\Relow raw data-Flat File"
-          TopLeft="526,5.49999999999989" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Truncate Data"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data"
+          TopLeft="15,107.5" />
         <EdgeLayout
-          Id="Package\PARENT container.PrecedenceConstraints[Constraint 2]"
-          TopLeft="572.4,48.4999999999999">
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="80,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-454.4,60.5000000000001"
+              EndConnector="0,60"
               Start="0,0"
-              End="-454.4,53.0000000000001">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.9488491048594" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.9488491048594"
-                    Point2="0,17.9488491048594"
-                    Point3="-4,17.9488491048594" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="160,204"
+          Size="160,248"
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container"
+          TopLeft="421.5,107.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data"
+          TopLeft="15,107.5" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Truncate Data"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy.PrecedenceConstraints[Constraint]"
+          TopLeft="80,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-450.4,17.9488491048594" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-450.4,17.9488491048594"
-                    Point2="-454.4,17.9488491048594"
-                    Point3="-454.4,21.9488491048594" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="160,204"
+          Size="160,248"
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy"
+          TopLeft="642.5,107.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="808,410"
+          Size="808,453"
+          Id="Package\PARENT container\Relow raw data-Flat File"
+          TopLeft="232,5.5" />
+        <EdgeLayout
+          Id="Package\PARENT container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="396,458.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-278,60.5000000000001"
+              Start="0,0"
+              End="-278,53.0000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-454.4,53.0000000000001" />
+                    End="0,13.468309859155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.468309859155"
+                    Point2="0,17.468309859155"
+                    Point3="-4,17.468309859155" />
+                  <mssgle:LineSegment
+                    End="-274,17.468309859155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-274,17.468309859155"
+                    Point2="-278,17.468309859155"
+                    Point3="-278,21.468309859155" />
+                  <mssgle:LineSegment
+                    End="-278,53.0000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19871,30 +21030,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\PARENT container.PrecedenceConstraints[Constraint 3]"
-          TopLeft="614.8,48.4999999999999">
+          TopLeft="556,458.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-237.8,60.5000000000001"
+              EndConnector="-179,60.5000000000001"
               Start="0,0"
-              End="-237.8,53.0000000000001">
+              End="-179,53.0000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.0241448692153" />
+                    End="0,22.9258241758242" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.0241448692153"
-                    Point2="0,27.0241448692153"
-                    Point3="-4,27.0241448692153" />
+                    Point1="0,22.9258241758242"
+                    Point2="0,26.9258241758242"
+                    Point3="-4,26.9258241758242" />
                   <mssgle:LineSegment
-                    End="-233.8,27.0241448692153" />
+                    End="-175,26.9258241758242" />
                   <mssgle:CubicBezierSegment
-                    Point1="-233.8,27.0241448692153"
-                    Point2="-237.8,27.0241448692153"
-                    Point3="-237.8,31.0241448692153" />
+                    Point1="-175,26.9258241758242"
+                    Point2="-179,26.9258241758242"
+                    Point3="-179,30.9258241758242" />
                   <mssgle:LineSegment
-                    End="-237.8,53.0000000000001" />
+                    End="-179,53.0000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19905,30 +21064,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\PARENT container.PrecedenceConstraints[Constraint 4]"
-          TopLeft="657.2,48.4999999999999">
+          TopLeft="716,458.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-21.2,60"
+              EndConnector="-80,60"
               Start="0,0"
-              End="-21.2,52.5">
+              End="-80,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.8008048289738" />
+                    End="0,22.7032967032967" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.8008048289738"
-                    Point2="0,26.8008048289738"
-                    Point3="-4,26.8008048289738" />
+                    Point1="0,22.7032967032967"
+                    Point2="0,26.7032967032967"
+                    Point3="-4,26.7032967032967" />
                   <mssgle:LineSegment
-                    End="-17.2,26.8008048289738" />
+                    End="-76,26.7032967032967" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.2,26.8008048289738"
-                    Point2="-21.2,26.8008048289738"
-                    Point3="-21.2,30.8008048289738" />
+                    Point1="-76,26.7032967032967"
+                    Point2="-80,26.7032967032967"
+                    Point3="-80,30.7032967032967" />
                   <mssgle:LineSegment
-                    End="-21.2,52.5" />
+                    End="-80,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20093,33 +21252,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="426,410"
           Size="131,43"
           Id="Package\PARENT container\Nums"
-          TopLeft="809.5,108.5" />
+          TopLeft="809.5,518.5" />
         <EdgeLayout
           Id="Package\PARENT container.PrecedenceConstraints[Constraint 5]"
-          TopLeft="699.6,48.4999999999999">
+          TopLeft="875.5,458.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="175.4,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="175.4,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.8005115089514" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.8005115089514"
-                    Point2="0,17.8005115089514"
-                    Point3="4,17.8005115089514" />
-                  <mssgle:LineSegment
-                    End="171.4,17.8005115089514" />
-                  <mssgle:CubicBezierSegment
-                    Point1="171.4,17.8005115089514"
-                    Point2="175.4,17.8005115089514"
-                    Point3="175.4,21.8005115089514" />
-                  <mssgle:LineSegment
-                    End="175.4,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20134,14 +21281,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="True"
+          IsExpanded="False"
           PanelSize="163,102"
-          Size="163,146"
+          Size="163,43"
           Id="Package\PARENT container\Load dimentions"
-          TopLeft="793.5,211.5" />
+          TopLeft="793.5,621.5" />
         <EdgeLayout
           Id="Package\PARENT container.PrecedenceConstraints[Constraint]"
-          TopLeft="875,151.5">
+          TopLeft="875,561.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -20164,14 +21311,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="962,412"
-          Size="962,455"
+          PanelSize="1046,720"
+          Size="1046,762"
           Id="Package\PARENT container"
-          TopLeft="108.5,107.5" />
+          TopLeft="66.5000000000001,107.5" />
         <NodeLayout
           Size="185,42"
           Id="Package\SQL LogPackageEnd"
-          TopLeft="497,623" />
+          TopLeft="497,930" />
         <NodeLayout
           Size="188,42"
           Id="Package\SQL LogPackageStart"
@@ -20200,7 +21347,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="589.5,562.5">
+          TopLeft="589.5,869.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -20818,5 +21965,107 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\Product Profiles csv"
+          TopLeft="25,5.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data.Paths[Flat File Source Output]"
+          TopLeft="113,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Relow raw data-Flat File\Sequence Container\Load Data\stg_PRODUCT_PROFILES">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\Organization Hierarchy csv"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER"
+          TopLeft="32.5,107.5" />
+        <EdgeLayout
+          Id="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data.Paths[Flat File Source Output]"
+          TopLeft="111,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PARENT container\Relow raw data-Flat File\Organization Hiearchy\Load Data\stg_ORG_HIER">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
